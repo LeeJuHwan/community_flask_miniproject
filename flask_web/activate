@@ -1,3 +1,5 @@
 export FLASK_APP=main
 export FLASK_DEBUG=true
-source stack_env/bin/activate
+source stack2_env/bin/activate
+cd ./web_project
+
