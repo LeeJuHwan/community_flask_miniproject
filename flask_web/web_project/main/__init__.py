@@ -12,12 +12,12 @@
     
 
 
-# import config
+import config
 from flask import Flask
 
 def create_app() :
     app = Flask(__name__)
-    # app.config.from_object(config)
+    app.config.from_object(config)
 
     from .base import main_base, board_base, login_base
     app.register_blueprint(main_base.bp)
