@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -107,6 +109,7 @@ img {
   text-align: center;
   border-radius: 0.5rem;
   transition: 0.3s;
+  width: 100%;
 }
 .login__button:hover {
   background-color: #65bf97;
@@ -189,4 +192,3 @@ img {
     bottom: -5.5rem;
   }
 }
-
