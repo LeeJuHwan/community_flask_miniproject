@@ -18,9 +18,26 @@
 					교육과정 중 기술 질문을 위한 웹 사이트</p>
 					<ul class="actions">
 						<li><a href="{{ url_for('board.select')}}" class="button icon solid fa-chevron-down scrolly">질문 하기</a></li>
-						<li><a href="{{ url_for('user.log')}}" class="button icon solid fa-chevron-down scrolly">테스트</a></li>
+						<li><a href="{{ url_for('user.login')}}" class="button icon solid fa-chevron-down scrolly">테스트</a></li>
 					</ul>
-				
+					<div>
+						{% if g.user %}
+						<ul class="navbar-nav">
+							<li class="nav-item ">
+								<a class="nav-link" href="{{url_for('user.logout')}}">{{ g.user.username }} / 로그아웃</a>
+							</li>
+						</ul>
+						{% else %}
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="{{ url_for('user.register') }}">계정생성</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{ url_for('user.login') }}">로그인</a>
+							</li>
+						</ul>
+						{% endif %}
+					</div>	
 				</div>
 				<div class="image phone">
 					<div class="inner">
@@ -29,9 +46,8 @@
 							<span id="apm" class = "apm" style="color:rgb(255, 255, 255); font-size: 20px; text-align: center;"  >ampm</span>
 				</div>
 			</div>
-
-					
-				
+			
+		
 			</header>
 		
 		<!-- One -->

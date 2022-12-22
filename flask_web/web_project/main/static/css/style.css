@@ -48,7 +48,7 @@ img {
   position: relative;
   height: 368px;
 }
-.login__register, .login__create {
+.login__register, .login__create, .login__login {
   position: absolute;
   bottom: 1rem;
   width: 100%;
@@ -182,10 +182,13 @@ img {
     width: 80%;
     margin-top: 0;
   }
-  .login__register, .login__create {
-    left: -11rem;
+  .login__register, .login__create, .login__login {
+    left: -10rem;
   }
   .login__register {
+    bottom: -7rem;
+  }
+  .login__login {
     bottom: -2rem;
   }
   .login__create {
