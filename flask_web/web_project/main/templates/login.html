@@ -18,63 +18,31 @@
 		  </div>
 		  <div class="login__forms">
 			<!--         login form -->
-			<form action="" class="login__register" id="login-in">
+			<form method="post" class="login__login" id="login-in">
+				{{ form.csrf_token }}
+				{% include "error.html" %}
 			  <h1 class="login__title">로그인</h1>
 			  <div class="login__box">
 				<i class='bx bx-user login__icon'></i>
-				<input type="text" placeholder="Username" class="login__input">
+				<input type="text" placeholder="Username" class="login__input" name="username" id="username"
+				value="{{ form.username.data or '' }}">
 			  </div>
 			  <div class="login__box">
 				<i class='bx bx-lock login__icon'></i>
-				<input type="text" placeholder="Password" class="login__input">
+				<input type="password" placeholder="Password" class="login__input" name="password" id="password"
+				>
 			  </div>
 	  
-			  <a href="#" class="login__button">로그인</a>
+			  <button class="login__button" type="submit">로그인</button>
 	  
 			  <div>
 				<span class="login__account login__account--account"> 멤버가 아니라면?  </span>
-				<span class="login__signin login__signin--signup" id="sign-up"><u> 여기</u></span>
+				<span class="login__signin login__signin--signup" id="sign-up"><u><a href="{{url_for('user.register')}}">여기</a></u></span>
 				<span class="login__account login__account--account">를 클릭하세요</span>
 			  </div>
 			</form>
 	  
-			<!--         create account form -->
-			<form method = post class="login__create none" id="login-up">
-				{{ form.csrf_token }}
-				{% include "error.html" %}
-			  <h1 class="login__title">회원가입</h1>
-			  <div class="login__box">
-				<i class='bx bx-user login__icon'></i>
-				<input type="text" placeholder="Username" class="login__input" name="username" id="username"
-                   value="{{ form.username.data or '' }}">
-			  </div>
-	  
-			  <!-- 이메일 폼 묻기 -->
-			  <div class="login__box">
-				<i class='bx bx-at login__icon'></i>
-				<input type="text" placeholder="Email" class="login__input", name="email", id="email"
-						value="{{ form.email.data or '' }}">
-			  </div>
-	  
-			  <div class="login__box">
-				<i class='bx bx-lock login__icon'></i>
-				<input type="password" placeholder="Password" class="login__input" name="password1" id="password1"
-				value="{{ form.password1.data or '' }}">
-			  </div>
 
-			  <div class="login__box">
-				<i class='bx bx-lock login__icon'></i>
-           		<input type="password" class="form-control" placeholder="Password check" name="password2" id="password2"
-                   value="{{ form.password2.data or '' }}">
-				</div>
-			  <!-- <a href="#" class="login__button">회원가입</a> -->
-			  <button class="login__button" type="submit">회원가입</button>
-	  
-			  <div>
-				<span class="login__account login__account--account">이미 계정이 있다면?</span>
-				<span class="login__signup login__signup--signup" id="sign-in"><u> 여기</u></span>
-			  </div>
-	  
 			  <!-- <div class="login__social">
 				<a href="https://www.google.com" class="login__social--icon"><i class='bx bxl-google'></i></a>
 				<a href="https://www.github.com" class="login__social--icon"><i class='bx bxl-github'></i></a>
