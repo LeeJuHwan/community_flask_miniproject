@@ -1,4 +1,4 @@
-                export FLASK_APP=main
+export FLASK_APP=main
 export FLASK_DEBUG=true
 source stack2_env/bin/activate
 cd ./web_project && flask run
