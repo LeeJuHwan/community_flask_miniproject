@@ -1,8 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for
-<<<<<<< HEAD
-# from ..db import conn, cur
-=======
->>>>>>> main
+from ..db import conn, cur
 
 bp = Blueprint("main", __name__, url_prefix="/")
 
