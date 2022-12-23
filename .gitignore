@@ -1,2 +1,4 @@
 /flask_web/web_project/__pycache__
+/flask_web/web_project/main/__pycache__
+/flask_web/web_project/main/base/__pycache__
 *.pyc
