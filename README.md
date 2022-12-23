@@ -2,7 +2,7 @@
 가상화 전 파일 공유  
 
 # Windows Git Setting  
-git clone https://github.com/LeeJuHwan/ community_flask_miniproject.git  
+git clone https://github.com/LeeJuHwan/community_flask_miniproject.git  
 cd community_flask_miniproject/flask_web  
 python -m venv win_env  
 pip install -r requirements.txt  
