@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -46,7 +48,7 @@ img {
   position: relative;
   height: 368px;
 }
-.login__register, .login__create {
+.login__register, .login__create, .login__login {
   position: absolute;
   bottom: 1rem;
   width: 100%;
@@ -107,6 +109,7 @@ img {
   text-align: center;
   border-radius: 0.5rem;
   transition: 0.3s;
+  width: 100%;
 }
 .login__button:hover {
   background-color: #65bf97;
@@ -179,14 +182,16 @@ img {
     width: 80%;
     margin-top: 0;
   }
-  .login__register, .login__create {
-    left: -11rem;
+  .login__register, .login__create, .login__login {
+    left: -10rem;
   }
   .login__register {
+    bottom: -7rem;
+  }
+  .login__login {
     bottom: -2rem;
   }
   .login__create {
     bottom: -5.5rem;
   }
 }
-
