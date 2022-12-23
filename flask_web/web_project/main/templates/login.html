@@ -7,6 +7,7 @@
 	<title>로그인</title>
 	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
 	
 </head>
 <body>
@@ -17,56 +18,35 @@
 		  </div>
 		  <div class="login__forms">
 			<!--         login form -->
-			<form action="" class="login__register" id="login-in">
+			<form method="post" class="login__login" id="login-in">
+				{{ form.csrf_token }}
+				{% include "error.html" %}
 			  <h1 class="login__title">로그인</h1>
 			  <div class="login__box">
 				<i class='bx bx-user login__icon'></i>
-				<input type="text" placeholder="Username" class="login__input">
+				<input type="text" placeholder="Username" class="login__input" name="username" id="username"
+				value="{{ form.username.data or '' }}">
 			  </div>
 			  <div class="login__box">
 				<i class='bx bx-lock login__icon'></i>
-				<input type="text" placeholder="Password" class="login__input">
+				<input type="password" placeholder="Password" class="login__input" name="password" id="password"
+				>
 			  </div>
 	  
-			  <a href="#" class="login__button">로그인</a>
+			  <button class="login__button" type="submit">로그인</button>
 	  
 			  <div>
 				<span class="login__account login__account--account"> 멤버가 아니라면?  </span>
-				<span class="login__signin login__signin--signup" id="sign-up"><u> 여기</u></span>
+				<span class="login__signin login__signin--signup" id="sign-up"><u><a href="{{url_for('user.register')}}">여기</a></u></span>
 				<span class="login__account login__account--account">를 클릭하세요</span>
 			  </div>
 			</form>
 	  
-			<!--         create account form -->
-			<form action="login__create none" class="login__create none" id="login-up">
-			  <h1 class="login__title">회원가입</h1>
-			  <div class="login__box">
-				<i class='bx bx-user login__icon'></i>
-				<input type="text" placeholder="Username" class="login__input">
-			  </div>
-	  
-			  <!-- 이메일 폼 묻기 -->
-			  <!-- <div class="login__box">
-				<i class='bx bx-at login__icon'></i>
-				<input type="text" placeholder="Email" class="login__input">
-			  </div> -->
-	  
-			  <div class="login__box">
-				<i class='bx bx-lock login__icon'></i>
-				<input type="text" placeholder="Password" class="login__input">
-			  </div>
-	  
-			  <a href="#" class="login__button">회원가입</a>
-	  
-			  <div>
-				<span class="login__account login__account--account">이미 계정이 있다면?</span>
-				<span class="login__signup login__signup--signup" id="sign-in"><u> 여기</u></span>
-			  </div>
-	  
-			  <div class="login__social">
+
+			  <!-- <div class="login__social">
 				<a href="https://www.google.com" class="login__social--icon"><i class='bx bxl-google'></i></a>
 				<a href="https://www.github.com" class="login__social--icon"><i class='bx bxl-github'></i></a>
-			  </div>
+			  </div> -->
 			</form>
 		  </div>
 		</div>
