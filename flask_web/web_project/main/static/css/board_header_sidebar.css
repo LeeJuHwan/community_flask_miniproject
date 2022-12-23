@@ -57,6 +57,7 @@
   border-left-width: 0;
   border-right-width: 1px;
 }
+
 #sidebar_menu_box {
   display: flex;
   padding: 10%;
@@ -69,6 +70,7 @@
 }
 #sidebar_txt {
   color: black;
+  padding-top: 3%;
   padding-left: 10%;
 }
 
@@ -102,36 +104,16 @@
 
 /* END sidebar */
 
-#contents {
-  top: 10%;
-  left: 0%;
-  z-index: 1;
-  max-width: 100% auto;
-  height: 100%;
-  /* line-height: 5vw; */
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 10px royalblue;
-  text-align: center;
-  background-color: antiquewhite;
-}
-
-/* #contents {
-  margin: 10%;
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
-} */
 
 
 /* Add a black background color to the top navigation bar */
-.topnav {
+#search_bar {
   overflow: hidden;
   background-color: #e9e9e9;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+#search_bar a {
   float: left;
   display: block;
   color: black;
@@ -142,19 +124,19 @@
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+#search_bar a:hover {
   background-color: #ddd;
   color: rgb(18, 94, 53);
 }
 
 /* Style the "active" element to highlight the current page */
-.topnav a.active {
+#search_bar a.active {
   background-color: #19802c;
   color: white;
 }
 
 /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
+#search_bar input[type=text] {
   float: right;
   padding: 6px;
   border: none;
