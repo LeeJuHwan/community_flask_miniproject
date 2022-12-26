@@ -1,0 +1,120 @@
+<!-- HEADER -->
+<!-- navbar navbar-fixed-top navbar-default-->
+<header id="header_top" class="header_top_board" role="navigation">
+    <div class="container-fluid">
+        <div class="img_container">
+            <a href="/" target="_self"><img id="logo" src="{{url_for('static', filename='css/images/banner_log.png')}}"  alt="이미지"></a>
+        </div>
+            <div id="search_bar_container">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Search something..">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+    </div>
+    <div id="header_nav_container">
+        <div class="header_nav_box">
+            <div class="header_nav_login" href="#login">LOGIN</div>
+            <div class="header_nav_join" href="#join">JOIN</div>
+        </div>
+    </div>
+    <button type="button" class="navbar-toggle">
+        <i class="fas fa-bars"></i>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</header>
+
+
+<!-- SIDE BAR -->
+<div id="sidebar_fluid"> 
+    <div id="sidebar_container" class="sidebar_to_row">
+        <div id="sidebar_menus" class="sidebar_to_row_box" role="navigation">
+            <div class="sidebar-nav">
+                <div class="accordion">
+                    <div id="sidebar_nav_ul_container" class="nav_menu home cate">
+                    <span id="sidebar_menu_box" class="menu top_menu">
+                        <a href="#home" class="menulink">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                            <span id="sidebar_txt" class="side_menu_txt">Home</span>
+                        </a>
+                        <a href="javascript:void(0);" class="subopen"></a>
+                    </span>
+                        <ul class="sub_menu_box">
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#community/home">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/home_deepg.png" class="faq_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">HOME</div>
+                            </a>
+                        </li>
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#community/about">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/about.png" class="faq_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">About</div>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div id="sidebar_nav_ul_container" class="nav_menu home cate">
+                    <span id="sidebar_menu_box" class="menu top_menu">
+                        <a href="#questions" class="menulink">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/questions.png" class="questions_icon"></img>
+                            <span id="sidebar_txt" class="side_menu_txt">Questions</span>
+                        </a>
+                        <a href="javascript:void(0);" class="subopen"></a>
+                    </span>
+                        <ul class="sub_menu_box">
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#questions/Tags">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/tags.png" class="tags_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Tags</div>
+                            </a>
+                        </li>
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#questions/users">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/users.png" class="users_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">Users</div>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div id="sidebar_nav_ul_container" class="nav_menu home cate">
+                    <span id="sidebar_menu_box" class="menu top_menu">
+                        <a href="#community" class="menulink">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/companies.png" class="community_icon"></img>
+                            <span id="sidebar_txt" class="side_menu_txt">Community</span>
+                        </a>
+                        <a href="javascript:void(0);" class="subopen"></a>
+                    </span>
+                        <ul class="sub_menu_box">
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#community/faq">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/faq.png" class="faq_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">F&Q</div>
+                            </a>
+                        </li>
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#community/qna">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/qna.png" class="qna_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">QnA</div>
+                            </a>
+                        </li>
+                        <li id="sub_sidebar_menu_box" class="bottom_menu">
+                            <a href="#community/contact">
+                                <img id="sidebar_icon" src="../static/image/sidebar_img/contact.png" class="contact_icon"></img>
+                                <div id="sidebar_txt" class="side_menu_txt">Contact</div>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+
+
+

@@ -1,0 +1,35 @@
+/* mainboard_contents START */
+
+#contents {
+    top: 300px;
+    left: 20em%;
+    z-index: 4;
+    max-width: 100% auto;
+    height: 1000px;
+    margin-top: 200px;
+    margin-left: 13em;
+    /* line-height: 5vw; */
+    border-radius: 0;
+    box-sizing: border-box;
+    border: 10px royalblue;
+    text-align: center;
+    background-color: antiquewhite;
+  }
+
+  @media screen and (max-width: 768px) {
+    #contents {
+      margin: 0;
+      padding: 0;
+      display: block;
+      overflow: auto;
+    }
+  
+  /* #contents {
+    margin: 10%;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  } */
+  
+
+  /* mainboard_contents END */
