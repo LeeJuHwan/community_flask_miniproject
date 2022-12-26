@@ -1,0 +1,85 @@
+<!-- 헤더 -->
+<!-- navbar navbar-fixed-top navbar-default-->
+<header id="header_top" class="header_top_board" role="navigation">
+    <div class="container-fluid">
+        <div class="img_container">
+            <a href="#" target="_self"><img id="logo" src="{{url_for('static', filename='css/images/banner_log.png')}}"  alt="이미지"></a>
+        </div>
+            <div id="search_bar_container">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Search something..">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div id="header_nav_container">
+                <div class="header_nav_box">
+                    <div class="header_nav_login" href="#login">LOGIN</div>
+                    <div class="header_nav_join" href="#join">JOIN</div>
+                </div>
+            </div>
+        </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fas fa-bars"></i>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</header>
+    
+<div id="sidebar_fluid"> 
+    <div id="sidebar_container" class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+
+                <ul id="sidebar_menu_container" class="nav">
+                    <li id="sidebar_menu_box" class="">
+                        <a href="#home">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Home</div>
+                        </a>
+                    </li>
+                    
+                    <li id="sidebar_menu_box"class="content">
+                        <a href="#questions">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/questions.png" class="questions_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Questions</div>
+                        </a>
+                    
+
+                        <div class="sub">
+                                <a href="#Tags">
+                                    <img id="sidebar_icon" src="../static/image/sidebar_img/tags.png" class="tags_icon"></img>
+                                    <div id="sidebar_txt" class="side_menu_txt">Tags</div>
+                                </a>
+
+                                <a href="#users">
+                                    <img id="sidebar_icon" src="../static/image/sidebar_img/users.png" class="users_icon"></img>
+                                    <div id="sidebar_txt" class="side_menu_txt">Users</div>
+                                </a>
+                        </div>
+                    </li>     
+                    <li id="sidebar_menu_box" class="s">
+                        <a href="#companies">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/companies.png" class="companies_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Companies</div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div> 
+</div>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		$(".sub").hide();
+		$(".content").click(function(){
+			$(".sub",this).slideToggle("fast");
+		});
+	});
+</script>
+
+
+
+
