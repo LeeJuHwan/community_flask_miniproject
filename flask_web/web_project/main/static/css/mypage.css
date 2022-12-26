@@ -1,44 +1,29 @@
 body {
-  position: absolute;
-  width: 1670px;
-  height: 1800px;
-  left: 250px;
-  top: 200px;
-
+  padding: 0;
+  margin: 0;
   background: #ffffff;
-  display: inline-flexbox;
   align-content: flex-start;
 }
 
 body > p {
-  position: static;
-  width: 118px;
-  height: 45px;
-  left: 50px;
-  top: 30px;
-
+  position: relative;
+  width: 11rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 45px;
-  /* identical to box height, or 150% */
-
-  text-align: center;
-
+  font-size: 2rem;
   color: #57dd79;
 }
 
 header {
-  position: static;
-  width: 1670px;
-  height: 300px;
-  left: 250px;
-  top: 200px;
-
+  width: 100rem;
+  height: 15rem;
   display: flex;
   justify-content: center;
-
   background: #ffffff;
 }
 
@@ -47,39 +32,23 @@ header {
   align-content: space-between;
 }
 
-header > boarder {
-  position: absolute;
-  width: 1670px;
-  height: 0px;
-  left: 0px;
-  top: 100px;
-
-  border: 1px solid #000000;
-}
-
 .questionStatus {
-  width: 50%;
-  height: 100%;
-
+  width: 45rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  margin-right: 200px;
+  margin-right: 5rem;
 }
 
-.questionStatus > span {
-  left: 120px;
-  top: 194px;
-
+.questionStatus > p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
-  line-height: 29px;
-
+  font-size: 2rem;
   color: #14792e;
 }
 
@@ -88,27 +57,23 @@ header > boarder {
 }
 
 .questionStatus > nav > ul > li {
-  width: 119px;
-  height: 78px;
+  width: 7rem;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  gap: 10px;
-  margin: 20px;
-
-  position: static;
-
+  margin: 1rem;
+  position: relative;
   background: #ddffe6;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
+  border-radius: 1rem;
   flex-basis: 25%;
 }
 
 .answerStatus {
-  width: 50%;
-  height: 100%;
+  width: 45rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   align-content: center;
@@ -117,17 +82,11 @@ header > boarder {
   justify-content: space-around;
 }
 
-.answerStatus > span {
-  position: static;
-  left: 926px;
-  top: 188px;
-
+.answerStatus > p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
-  line-height: 29px;
-
+  font-size: 2rem;
   color: #14792e;
 }
 
@@ -136,90 +95,84 @@ header > boarder {
 }
 
 .answerStatus > nav > ul > li {
-  width: 119px;
-  height: 78px;
+  width: 7rem;
+  height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  gap: 10px;
-  margin: 20px;
-
-  position: static;
-
+  margin: 1rem;
+  position: relative;
   background: #ddffe6;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
+  border-radius: 1rem;
   flex-basis: 25%;
 }
 
 .self_status {
+  margin: 4rem;
   box-sizing: border-box;
-
-  position: static;
-  width: 1470px;
-  height: 505px;
-  left: 100px;
-  top: 400px;
-
-  border: 5px solid #d9d9d9;
+  position: relative;
+  border: 0.2rem solid #d9d9d9;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .self_status > header {
-  width: 250px;
-  height: 100%;
+  width: 20rem;
+  height: 25rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  border-right: 0.1rem solid #d9d9d9;
 }
 
 #sinceFrom {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 800;
-  font-size: 25px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-align: center;
-
   color: #000000;
 }
 
 .self_introduce {
-  width: 40%;
-  height: 100%;
+  width: 40rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
+  border-right: 0.1rem solid #d9d9d9;
 }
 
 #inputProfile > p {
+  position: relative;
+  width: 27rem;
+  height: 13rem;
+  border: 0;
+  margin: 0;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 1.2rem;
+  /* line-height: 23px; */
   display: flex;
-  justify-content: center;
   align-items: center;
+  border-bottom: 0.1rem solid #d9d9d9;
 }
 
-#inputProfile > input {
-  position: absolute;
-  left: 700px;
-  top: 550px;
-}
-
-.self_introduce p {
-  width: 100%;
-  height: 50%;
+#inputProfile > p > input {
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  top: 3rem;
+  left: 10rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
 }
 
 .grade_rank {
-  width: 40%;
-  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -227,61 +180,88 @@ header > boarder {
 }
 
 .self_rank {
-  height: 50%;
+  height: 20rem;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
+.self_rank p {
+  position: relative;
+  right: 13rem;
+  top: 1rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #14792e;
+}
+
 .self_rank > ul {
-  height: 50%;
   display: flex;
+  padding: 0;
 }
 
 .self_rank > ul > li {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(33deg, #d7d79f, #e5e5b9);
-  border: 2px solid #f8f8ea;
+  flex-direction: column;
+  align-items: baseline;
+  border: 0.2rem solid black;
   text-align: center;
-  line-height: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-  float: left;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
   flex-basis: 25%;
-  width: 155px;
-  height: 155px;
-  border-radius: 21.67px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 38px;
+  color: #202020;
+}
+
+.self_rank_text1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #808080;
+}
+
+.self_rank_text2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
   color: #202020;
 }
 
 .self_grade {
-  height: 50%;
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
+.self_grade p {
+  position: relative;
+  right: 11.4rem;
+  top: -5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #14792e;
+}
+
 .day_week_karma {
-  position: static;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 100%;
-  margin: 100px;
+  position: relative;
+  margin: 5rem;
   background: #57dd79;
-  width: 329px;
-  height: 345px;
-  border-radius: 21.67px;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,45 +274,33 @@ header > boarder {
 }
 
 .day_week_karma > ul > li {
-  width: 250px;
-  height: 85px;
-  border: 0px;
-  margin-top: 10px;
+  width: 15rem;
+  height: 5rem;
+  margin-top: 1re;
+  display: flex;
+  flex-direction: column;
+}
 
+.karma1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.karma2 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 42px;
-  line-height: 49px;
+  font-size: 2rem;
   color: #ffffff;
-
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
 }
 
-.self_rank p {
-  position: relative;
-  right: 200px;
+.karma3 {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 23px;
-
-  color: #14792e;
-}
-
-.self_grade p {
-  position: relative;
-  right: 200px;
-  top: -50px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 23px;
-  white-space: nowrap;
-
-  color: #14792e;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
 }
