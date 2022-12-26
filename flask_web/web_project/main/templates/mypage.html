@@ -19,58 +19,83 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style_board.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/mypage.css') }}"
+    />
 
     <title>my page</title>
     <style></style>
   </head>
+
   <body>
+    <p>My Page</p>
     <header>
-      <h1>My Page</h1>
-      <div class="questionStatus">
-        <nav>
-          <ul>
-            <li><a href="#">총 질문수</a></li>
-            <li><a href="#">답변대기중</a></li>
-            <li><a href="#">답변완료</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="answerStatus">
-        <nav>
-          <ul>
-            <li><a href="#">총 답변수</a></li>
-            <li><a href="#">채택대기중</a></li>
-            <li><a href="#">채택완료</a></li>
-          </ul>
-        </nav>
+      <div class="twin_status">
+        <div class="questionStatus">
+          <span>질문 현황</span>
+          <nav>
+            <ul>
+              <li><a href="#">총 질문수</a></li>
+              <li><a href="#">답변대기중</a></li>
+              <li><a href="#">답변완료</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="answerStatus">
+          <span>답변 현황</span>
+          <nav>
+            <ul>
+              <li><a href="#">총 답변수</a></li>
+              <li><a href="#">채택대기중</a></li>
+              <li><a href="#">채택완료</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <section class="self_status">
       <header>
+        <span
+          ><img
+            src="http://image.yes24.com/images/00_event/2020/0625Developer/authImg.jpg"
+        /></span>
         <h2>sesac 2022</h2>
-        <span>PHOTO</span>
-        <div id="sinceFrom">가입일 2022.12.10</div>
+        <div id="sinceFrom">가입일<br />2022.12.10</div>
       </header>
-      <article1>
-        <div id="self_introduce">Sesac 금천 2기 수료생입니다.</div>
-      </article1>
-      <article2>
-        <div id="self_rank">
+      <div class="self_introduce">
+        <div id="inputProfile">
+          <p>Sesac 금천 2기 수료생입니다</p>
+          <input type="button" value="수정" />
+        </div>
+        <div></div>
+      </div>
+
+      <div class="grade_rank">
+        <div class="self_rank">
+          <p>랭킹</p>
           <ul>
             <li>채택답변수</li>
             <li>답변채택률</li>
             <li>추천수</li>
           </ul>
         </div>
-        <div id="self_grade">
-            <div>임시</div>
+        <div class="self_grade">
+          <p>나의 등급</p>
+          <div>grades</div>
         </div>
-      </article2>
+      </div>
     </section>
-    <div id="day_week_karma"
-    <footer>
-        Footer Information
-    </footer>
+    <section class="bottomClass">
+      <div class="day_week_karma">
+        <ul>
+          <li>Daily 8/16 Daily streak: 144days</li>
+          <li>Weekly 24/48 Weekly streak: 20 weeks</li>
+          <li>Karma Master Current score : 15000</li>
+        </ul>
+      </div>
+    </section>
+    <footer>Footer Information</footer>
   </body>
 </html>
