@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/jiye.css')}}" />
+
+<div id="contents">
+    <div class="header">
+        <div class="title">
+            All Questions
+        </div>
+        <div class="menu">
+            상위메뉴 > 중간메뉴 > 하위메뉴
+        </div>
+        <hr class="line1">
+    </div>
+
+    <div class="detail">
+        <div class="question">
+            <div class="q_title">
+                게시판 이 부분 CSS 코드 어떻게 구현해야 할까요?
+            </div>
+            <hr class="line2">
+            <div class="q_content">
+                <div class="q_text">가로로 정렬하고 싶은데 수직으로 정렬이 됩니다.
+                    제 코드는 다음과 같습니다.</div>
+
+                <img class="q_picture"
+                    src="https://images.velog.io/images/seochanh/post/bb832d04-48d8-412d-812c-515ddab31e7b/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202020-12-10%20181514.png">
+
+                <div class="buttons">
+                    <button type="button" class="edit-button">수정</button>
+                    <button type="button" class="delete-button">삭제</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="answer">
+            <div class="a_title">1개의 답변이 있습니다</div>
+            <hr class="line3">
+            <div class="a_content">
+                <div class="a_text">
+                    display:flex 설정을 해주셔야 합니다.
+                </div>
+                <div class="buttons">
+                    <button type="button" class="edit-button">수정</button>
+                    <button type="button" class="delete-button">삭제</button>
+                </div>
+            </div>
+            <input type="text" class="new_content">
+        </div>
+    </div>
+    <button class="registration">답변등록</button>
+</div>
+
+{% endblock %}
