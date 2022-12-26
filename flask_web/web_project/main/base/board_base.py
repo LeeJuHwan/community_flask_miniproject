@@ -9,3 +9,7 @@ def select() :
 @bp.route("/test")
 def test() :
     return render_template("jiye.html")
+
+@bp.route("/test2")
+def test2() :
+    return render_template("jiye2.html")
