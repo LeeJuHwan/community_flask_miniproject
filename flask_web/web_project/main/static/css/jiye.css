@@ -1,0 +1,189 @@
+.title{
+    color: #57DD79;
+    left: 50px;
+    top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+
+    padding-top: 50px;
+    padding-left: 50px;
+}
+    
+.menu {
+
+    color: #000000;
+    left: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+.detail{
+    max-width: 1570px;
+}
+
+.question{
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.q_title {
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+
+    padding-bottom: 25px;
+    
+    }
+
+
+.q_content {
+    
+    box-sizing: border-box;
+
+    width: 1470px;
+    height: auto;
+    left: 100px;
+    top: 350px;
+
+    margin-top: 50px;
+
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+.q_picture{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.answer{
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.a_title{
+    padding-top: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.a_content{
+    box-sizing: border-box;
+
+    height:auto;
+    width: 1470px;
+
+    margin-top: 50px;
+
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.buttons{
+    background: #FFFFFF;
+
+    padding-top: 100px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.edit-button{
+    background: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    padding:10px;
+ 
+}
+.delete-button{
+    background: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    padding:10px;
+}
+
+.new_content{
+    box-sizing: border-box;
+    top: 200px;
+    height: 200px;
+    width: 1470px;
+
+    margin-top:50px;
+
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.registration{
+    background-color: #56C171;
+    border: 1px solid #14792E;
+    border-radius: 10px;
+    color: #FFFFFF;
+
+    margin-left: 100px;
+    margin-top:50px;
+    margin-bottom:50px;
+    width: 112px;
+    height: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+
+}
