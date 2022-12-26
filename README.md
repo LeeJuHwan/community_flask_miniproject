@@ -1,4 +1,17 @@
-# community_flask_miniproject
-가상화 전 파일 공유
-
-git pr test
+cffi==1.15.1
+click==8.1.3
+cryptography==38.0.4
+dnspython==2.2.1
+email-validator==1.3.0
+Flask==2.2.2
+Flask-WTF==1.0.1
+idna==3.4
+importlib-metadata==5.2.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.1
+pycparser==2.21
+PyMySQL==1.0.2
+Werkzeug==2.2.2
+WTForms==3.0.1
+zipp==3.11.0

@@ -1,2 +1,6 @@
 *.pyc
 __pycache__
+main/db.py
+.DS_Store
+flask_web/DS_Store
+flask_web/web_project/DS_Store

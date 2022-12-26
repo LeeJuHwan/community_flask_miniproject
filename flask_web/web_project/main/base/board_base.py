@@ -4,4 +4,4 @@ bp = Blueprint('board', __name__, url_prefix='/board')
 
 @bp.route("/")
 def select() :
-    return render_template("board.html")
+    return render_template("tags.html")
