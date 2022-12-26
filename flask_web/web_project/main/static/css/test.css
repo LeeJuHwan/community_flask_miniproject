@@ -1,0 +1,161 @@
+h1{
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+
+.contents{
+    width: 80%;
+}
+
+.contents_head{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 1rem;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.w-btn-green-outline:hover {
+    background-color: #77af9c;
+    color: #d7fff1;
+}
+
+.w-btn-green-outline {
+    border: 3px solid #77af9c;
+    color: darkgray;
+}
+
+.w-btn:hover{
+    color: #14d895;
+}
+
+.w-btn-green {
+    background-color: fff;
+    color: #1b8c65;
+}
+
+.question_cnt{
+    position: relative;
+    left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.tags_list{
+    display: flex;
+    list-style:none;
+}
+
+.tags_item{
+    list-style: none;
+}
+
+.w-btn2{
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: "paybooc-Light", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.w-btn2:hover{
+    color: #14d895;
+}
+
+.stats{
+    position: relative;
+    left: 2rem;
+}
+
+.stats_item{
+    position: relative;
+    top: 1rem;
+    margin: 1rem;
+    list-style: none;
+}
+
+.questions_layout{
+    display: flex;
+    
+}
+
+.questions_content{
+    flex-grow: 1;
+    max-width: 100%;
+    width: 80%;
+}
+
+.content_item{
+    margin: 1rem;
+    left: 2rem;
+    position: relative;
+}
+
+.content_tag_list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_title{
+    font-weight: 500;
+    font-size: 1.5rem;
+    hyphens: auto;
+    color: #0074cc;
+    font-family: "Quicksand", sans-serif;
+
+}
+
+.content_title:hover{
+    color: #0091ff;
+    cursor: pointer;
+}
+
+.content_view{
+    font-size: 1rem;
+}
+
+
+.content_tags{
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 0.4em 0.5em;
+    border: 1px solid white;
+    color: #39739d;
+    background-color: #e1ecf4;
+}
+
+.content_tags:hover{
+    cursor: pointer;
+    color: #5b7c94;
+    background-color: #bcd1e1;
+}
+.question_count{
+    display: flex;
+    align-items: flex-end;
+}
+
+.content_writer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
