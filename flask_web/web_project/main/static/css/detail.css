@@ -1,37 +1,31 @@
+.detail{
+    min-width: 40rem;
+    max-width: 100%;
+}
 .title{
     color: #57DD79;
-    left: 50px;
-    top: 40px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2rem;
 
-    padding-top: 50px;
-    padding-left: 50px;
+    margin:1.5rem;
+    padding-top: 1rem;
+
+    text-align: left;
 }
-    
-/* .menu {
 
-    color: #000000;
-    left: 50px;
-    font-family: 'Roboto';
-    font-style: normal;
+.menu_1{
     font-weight: 700;
-    font-size: 20px;
-
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-} */
-
-.detail{
-    max-width: 1570px;
+    margin:1.5rem;
+    text-align: left;
 }
+
 
 .question{
     padding-top: 50px;
     padding-left: 100px;
+    padding-right: 100px;
 }
 
 .q_title {
@@ -43,31 +37,49 @@
     line-height: 45px;
 
     padding-bottom: 25px;
-    
+    text-align:left;
     }
+.writer{
+    font-weight: 700;
+    font-size: 15px;
 
+    margin-left:10rem;
+    margin-top: -2rem;
+
+    text-align: right;
+}
+.time{
+    font-size: 15px;
+    
+
+    margin-left:10rem;
+    margin-top: -0.8rem ;
+               
+    text-align: right;
+}
 
 .q_content {
     
     box-sizing: border-box;
 
-    height: auto;
+    min-height:12rem;
+    line-height: 2rem;
 
     margin-top: 50px;
 
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
+    padding:1.5rem;
 
     background-color: #FFFFFF;
-    border: 1px solid #D9D9D9;
+    border: 3px solid #D9D9D9;
     border-radius: 10px;
 
     font-family: 'Roboto';
     font-style: normal;
     font-size: 20px;
+    text-align:left;
 
+    display: flex;
+    flex-direction: column;
 }
 
 .q_picture{
@@ -78,6 +90,7 @@
 .answer{
     padding-top: 50px;
     padding-left: 100px;
+    padding-right: 100px;
 }
 
 .a_title{
@@ -86,18 +99,19 @@
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
+
+    text-align:left;
 }
 
 .a_content{
     box-sizing: border-box;
 
-    height:auto;
+    min-height:12rem;
+    line-height: 2rem;
+
     margin-top: 50px;
 
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
+    padding:1.5rem;
 
     background-color: #FFFFFF;
     border: 1px solid #D9D9D9;
@@ -106,42 +120,63 @@
     font-family: 'Roboto';
     font-style: normal;
     font-size: 20px;
+    text-align:left;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .buttons{
-    background: #FFFFFF;
 
-    padding-top: 100px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-left: 30px;
+    background: #FFFFFF;
+    margin-top:4rem;
 }
+
 
 .edit-button{
     background: #FFFFFF;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
 
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 
-    padding:10px;
- 
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:10px;
+    padding-right:10px;
 }
+
+.edit-button:hover {
+    color: white;
+    background: #14792E;
+    border:#14792E;
+  }
+
 .delete-button{
     background: #FFFFFF;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
 
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 
-    padding:10px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:10px;
+    padding-right:10px;
+
 }
+
+.delete-button:hover {
+    color: white;
+    background: rgb(70, 70, 70);
+    border:rgb(70, 70, 70);
+  }
 
 .new_content{
     box-sizing: border-box;
