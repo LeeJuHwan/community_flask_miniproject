@@ -6,30 +6,29 @@
     <div class="all">
         All Questions
     </div>
-
     <div class="munu">
         상위메뉴 > 중간메뉴 > 하위메뉴
     </div>
-
     <hr class="black">
-
     <div class="que">
         <h3>질문등록</h3>
     </div>
-
     <hr class="black2">
 
+    <form action="{{ url_for('board.board_write') }}" method="post">
+        {{ form.csrf_token }}
+        {% include "error.html" %}
     <div class="title">
         <h3>제목</h3>
     </div>
     <div>
-        <input type="text" name="title" id="title" value="{{ form.title.data or ''}}">
+        <input class = "input1" type="text" name="title" id="title" value="{{ form.title.data or ''}}">
     </div>
     <div class="content">
         <h3>내용</h3>
     </div>
     <div>
-        <input type="text" class="input2">
+        <input type="text" class="input2" name="content" id="content" rows="10" value="{{ form.content.data or ''}}">>
     </div>
     <div>
         <input type="text" class="input3">
@@ -38,22 +37,23 @@
         <button class="tag">첨부파일</button>
     </div>
 
-
+    
     <div class="select">
-        <!-- <input type="text"class="input4"> -->
-        <select name="language" class="input4">
-            <form action="tag_select">
+        <!-- <form action="{{ url_for('board.board_write') }}" method="post"> -->
+            <select name="language", id = "language" class="input4">
                 {% for items in tag_list %}
                 <option value="{{items['lang']}}">{{items['lang']}}</option>
                 {% endfor %}
         </select>
+    
     </div>
-    <div>
+
+    <!-- <div>
         <button class="tag2" type="submit">태그선택</button>
-        </form>
-    </div>
+    </div> -->
     <div>
-        <button class="save">저장하기</button>
+        <button class="save" type="submit">저장하기</button>
     </div>
+</form>
 </div>
 {% endblock %}

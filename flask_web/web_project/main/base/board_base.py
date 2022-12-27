@@ -9,13 +9,15 @@ bp = Blueprint('board', __name__, url_prefix='/board')
 def select() :
     sql="""
     SELECT b.id, username, b.title, b.content, b.write_date, t.lang, b.views,
-    (select count(*) from reply r where b.id = r.board_id) as cnt_reply,
+    ifnull((select count(*) from reply r where b.id = r.board_id), 0) as cnt_reply,
     (select count(*) from board) as cnt_board
     from board b join user u on b.user_id = u.id join tag t on t.id = b.tag_id;
     """
     cur.execute(sql)
     data_list = cur.fetchall()
-    print("select data list", data_list)
+    # print("select data list", data_list)
+    # if data_list is None :
+    #     data_list.append({'cnt_reply' : 0})
     return render_template("test/test.html", data_list = data_list)
 
 @bp.route("detail/<int:board_id>")
@@ -37,9 +39,11 @@ def detail(board_id) :
     """
     cur.execute(sql)
     reply = cur.fetchall()
-    print("reply sql 유효 검사", reply)
+    print(reply)
+    print("reply sql 유효 검사", type(reply), reply) # tuple 
     print("reply board id값 검사", board_id)
-    
+    if len(reply) == 0 :
+        return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
     return render_template("detail.html", board = board, reply = reply, form = form)
 
 @bp.route("answer/<int:board_id>", methods = ('POST',))
@@ -67,46 +71,54 @@ def reply_create(board_id):
     sql = f"""
     SELECT * FROM reply WHERE board_id = {board_id}
     """
+    print("********",board)
     cur.execute(sql)
     reply = cur.fetchall()
     return render_template('detail.html', board=board, form=form, reply=reply)
+    
 
 
 @bp.route("users")
 def show_users() :
     return render_template("users.html")
-    
-@bp.route("write", methods = ("GET", "POST"))
+
+@bp.route("write", methods = ("POST","GET"))
 def board_write() :
     if g.user is None :
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('user.login'))    
     form = QuestionForm()
+    
     sql = f"""
     select lang from tag;
     """
     cur.execute(sql)
     tag_list = cur.fetchall()
     print("sql 출력물 검사", tag_list)
-    # if request.method == "POST" and form.validate_on_submit():
-    #     sql = f"""
-    #     insert into board(user_id, title, content, write_date,tag_id) values (2, '게시글2', '테스트2', '2022-12-26', 2);
-    #     insert into board (title, content, create_date, user_id) values ('{form.subject.data}','{form.content.data}','{datetime.now()}', {g.user['user_id']})
-    #     """
-    #     cur.execute(sql)
-    #     conn.commit()
-    #     return redirect(url_for('board.select'))
-    return render_template("write.html", tag_list = tag_list, form = form)
-
-def tag_select() :
-    sql = """
-    select lang from tag
-    """
-    cur.execute(sql)
-    tag_list = cur.fetchall()
-    return render_template("ssen.html", tag_list = tag_list)
+    print("equest.method 검사 233",request.method)
 
 
+    if request.method == "POST" :
+        print("####", request.form["language"])
+        tag_select = request.form["language"]
+        sql = f"""
+        select t.id from tag t left outer join board b on t.id = b.tag_id 
+        where lang = '{tag_select}';
+        """
+        cur.execute(sql)
+        select_tag_id = cur.fetchall()[0]
+        print("포스트 id 값 조회", select_tag_id)
+        print(form.title.data, form.content.data, datetime.now())
+        sql = f"""
+          insert into board (title, content, write_date, user_id, tag_id) values ('{form.title.data}','{form.content.data}','{datetime.now()}', {g.user['user_id']}, {select_tag_id['id']})
+         """
+         
+        cur.execute(sql)
+        conn.commit()
+        print("commit 후 검사 #########")
+        return redirect(url_for('board.select', tag_list = tag_list, form = form))
 
+    
+    return render_template('write.html', form=form, tag_list=tag_list)
 
 @bp.route("test3")
 def test3() :
@@ -114,4 +126,4 @@ def test3() :
 
 @bp.route("grade")
 def grade() :
-    return render_template("grade.html")
+    return render_template("grade.html)

@@ -1,0 +1,53 @@
+@media screen and (max-width: 768px) {
+  #contents {
+    overflow-y: hidden;
+  }
+
+  header {
+    height: 100%;
+  }
+  #contents {
+    padding-left: 0;
+  }
+  .twin_status {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .questionStatus {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .answerStatus {
+    width: 50%;
+    flex-direction: column;
+  }
+  .self_status {
+    display: flex;
+    flex-direction: column;
+  }
+  .self_introduce {
+    width: 100%;
+    height: 14rem;
+  }
+  #inputProfile {
+    width: 55%;
+  }
+  .self_rank > ul > li {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #inputProfile > div {
+    justify-content: center;
+  }
+
+  #inputProfile > div > input {
+    left: 2rem;
+  }
+
+  #self_rank_text {
+    top: -0.5rem;
+  }
+}
