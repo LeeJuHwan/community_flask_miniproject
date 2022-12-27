@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Details</title>
+{% extends 'base.html' %}
+{% block content %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/jiye.css')}}"/>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/reset.css')}}"/>
-</head>
-<body>
-    <div>
+
+    <div id="contents">
         <div class = "header">
             <div class="title">
                 All Questions
@@ -67,7 +60,4 @@
             <button class="registration" type="submit">답변등록</button></div>
         </form>
     </div>
-
-
-</body>
-</html>
+{% endblock %}

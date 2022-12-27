@@ -12,6 +12,7 @@
     
 
 
+from .base import qna_base
 import config
 from flask import Flask
 
@@ -20,11 +21,10 @@ def create_app() :
     app = Flask(__name__)          
     app.config.from_object(config)
 
-    from .base import main_base, board_base, login_base, qna_views, board_base_view
+    from .base import main_base, board_base, login_base, qna_base
     app.register_blueprint(main_base.bp)
     app.register_blueprint(board_base.bp)
     app.register_blueprint(login_base.bp)
-    app.register_blueprint(qna_views.bp)
-    app.register_blueprint(board_base_view.bp)
+    app.register_blueprint(qna_base.bp)
     
     return app
