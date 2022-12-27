@@ -2,4 +2,11 @@
 /flask_web/web_project/main/__pycache__
 /flask_web/web_project/main/base/__pycache__
 /flask_web/win_env/
+flask_web/stack2_env
 *.pyc
+
+*.DS_Store
+*.csv
+*.docx
+*.pdf
+*.xlsx
