@@ -6,6 +6,10 @@
   #header_nav_container {
     display: none;
   }
+  #contents {
+    padding-left: 0;
+    width: 100%;
+  }
 
   /* 햄버거 버튼 */
   .navbar-toggle {
