@@ -11,15 +11,15 @@
     <div class="munu_1">
         상위메뉴 > 중간메뉴 > 하위메뉴
     </div>
-
     <hr class="black">
-
     <div class="que">
         질문등록
     </div>
-
     <hr class="black2">
 
+    <form action="{{ url_for('board.board_write') }}" method="post">
+        {{ form.csrf_token }}
+        {% include "error.html" %}
     <div class="title">
         제목
     </div>
@@ -28,14 +28,12 @@
     </div>
     <div class="content">
         내용
+
     </div>
 
     <div class="input2">
        <textarea cols="30" rows="10"></textarea>
     </div>
-
-    
-    
 
     <div class="done">
         <div class="select">
@@ -52,6 +50,8 @@
         <div>
             <button class="save">저장하기</button>
         </div>
+
     </div>
+</form>
 </div>
 {% endblock %}

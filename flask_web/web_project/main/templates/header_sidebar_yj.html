@@ -6,12 +6,19 @@
             <a href="/" target="_self"><img id="logo" src="{{url_for('static', filename='image/logo.png')}}"
                     alt="이미지"></a>
         </div>
+
+        <form method="post">
         <div id="search_bar_container">
             <div class="search-box">
-                <input class="search-input" type="text" placeholder="Search something..">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input class="search-input" name="query" value="{{request.form['query']}}" type="text" placeholder="검색">
+                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
+        
+    </form>
+    
+    <article class="my-2">
+        <h4 class="my-0">
     </div>
     <div id="header_nav_container">
         <div class="header_nav_box">
@@ -58,7 +65,7 @@
                 <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
                 <div>Tags</div>
             </a>
-            <a href="# ">
+            <a href="{{url_for('main.users')}}">
                 <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
                 <div>Users</div>
             </a>

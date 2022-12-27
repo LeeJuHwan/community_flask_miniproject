@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
-<section id="contents" class="faq-section">
+<section id="contents" class="faq-section" style="padding-top: 0px;">
     <div class="container">
         <div class="row">
             <!-- ***** FAQ Start ***** -->
@@ -14,19 +14,20 @@
             <div class="col-md-6 offset-md-3">
                 <div class="faq" id="accordion">
                     <div class="card">
-                        {% for qna in qna_list %}
+                        {% for faq in faq_list %}
                         <div class="card-header" id="faqHeading-1">
                             <div class="mb-0">
                                 <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
                                     data-aria-expanded="true" data-aria-controls="faqCollapse-1">
-                                    <span class="badge">{{loop.index}}</span>{{qna['Title']}}
+                                    <span class="badge">{{loop.index}}</span>{{faq['title']}}
                                 </h5>
                             </div>
                         </div>
                         <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1"
                             data-parent="#accordion">
-                            <div class="card-body">
-                                <p>{{qna.Content}}</p>
+                            <div class="card-body" style = "text-align: left;">
+                                
+                                <p>{{faq.content}}</p>
                             </div>
                         </div>
                         {% endfor %}
@@ -37,4 +38,6 @@
         </div>
     </div>
 </section>
+spcri
 {% endblock %}
+
