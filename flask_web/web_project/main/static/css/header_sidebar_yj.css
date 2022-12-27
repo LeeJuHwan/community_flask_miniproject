@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+#contents {
+  padding-left: 300px;
+  width: calc(90% - 300px);
+}
 
 #header_top {
   display: flex;
@@ -33,7 +37,9 @@ a {
   border-right-width: 0;
   background-color: white;
 }
-
+.container-fluid form {
+  display:flex;
+}
 /* .header_nav_container {
   position: fixed;
   overflow: hidden;
