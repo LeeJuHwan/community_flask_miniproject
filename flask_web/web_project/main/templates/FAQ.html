@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
-
-    <title>qnapage</title>
-
-</head>
-<body>
-    <section class="faq-section">
-        <div class="container">
-          <div class="row">
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/qna.css') }}">
+<section id="contents" class="faq-section">
+    <div class="container">
+        <div class="row">
             <!-- ***** FAQ Start ***** -->
             <div class="col-md-6 offset-md-3">
 
@@ -28,18 +17,24 @@
                         {% for qna in qna_list %}
                         <div class="card-header" id="faqHeading-1">
                             <div class="mb-0">
-                                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
+                                <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
+                                    data-aria-expanded="true" data-aria-controls="faqCollapse-1">
                                     <span class="badge">{{loop.index}}</span>{{qna['Title']}}
                                 </h5>
                             </div>
                         </div>
-                        <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
+                        <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1"
+                            data-parent="#accordion">
                             <div class="card-body">
                                 <p>{{qna.Content}}</p>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
-        </section>
-</body>
-</html>
+                </div>
+            </div>
+            <!-- ***** FAQ End ***** -->
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-    <!-- stack_main CSS
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <!-- stack_board CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/reset.css') }}"
@@ -24,36 +18,54 @@
       href="{{ url_for('static', filename='css/mypage.css') }}"
     />
 
-    <title>my page</title>
-    <style></style>
+    <title>Document</title>
   </head>
-
   <body>
     <p>My Page</p>
+    <div
+      style="height: auto; width: 100%; border-bottom: 0.1rem solid #d9d9d9"
+    ></div>
+
     <header>
       <div class="twin_status">
         <div class="questionStatus">
-          <span>질문 현황</span>
+          <p>질문<span style="color: black"> 현황</span></p>
           <nav>
             <ul>
-              <li><a href="#">총 질문수</a></li>
-              <li><a href="#">답변대기중</a></li>
-              <li><a href="#">답변완료</a></li>
+              <li>
+                <a href="#"> 총 질문수 </a>
+              </li>
+              <li>
+                <a href="#"> 답변대기중 </a>
+              </li>
+              <li>
+                <a href="#"> 답변완료 </a>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="answerStatus">
-          <span>답변 현황</span>
+          <p>답변<span style="color: black"> 현황</span></p>
           <nav>
             <ul>
-              <li><a href="#">총 답변수</a></li>
-              <li><a href="#">채택대기중</a></li>
-              <li><a href="#">채택완료</a></li>
+              <li>
+                <a href="#"> 총 답변수 </a>
+              </li>
+              <li>
+                <a href="#"> 채택대기중 </a>
+              </li>
+              <li>
+                <a href="#"> 채택완료 </a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
+      <div></div>
     </header>
+    <div
+      style="height: auto; width: 100%; border-bottom: 0.1rem solid #d9d9d9"
+    ></div>
 
     <section class="self_status">
       <header>
@@ -66,33 +78,79 @@
       </header>
       <div class="self_introduce">
         <div id="inputProfile">
-          <p>Sesac 금천 2기 수료생입니다</p>
-          <input type="button" value="수정" />
+          <p>
+            Sesac 금천 2기 수료생입니다
+            <input type="button" value="수정" />
+          </p>
         </div>
-        <div></div>
       </div>
-
       <div class="grade_rank">
         <div class="self_rank">
-          <p>랭킹</p>
+          <p>
+            <img src="{{url_for('static',filename='image/Crown.png')}}" />랭킹
+          </p>
           <ul>
-            <li>채택답변수</li>
-            <li>답변채택률</li>
-            <li>추천수</li>
+            <li>
+              <div class="self_rank_text1">채택답변수</div>
+              <div class="self_rank_text2">7/11</div>
+              <div id="rank_icon1">
+                <img src="{{url_for('static',filename='image/Glyph.png')}}" />
+              </div>
+            </li>
+            <li>
+              <div class="self_rank_text1">답변채택률</div>
+              <div class="self_rank_text2">4009</div>
+              <div id="rank_icon2">
+                <img src="{{url_for('static',filename='image/Vector.png')}}" />
+              </div>
+            </li>
+            <li>
+              <div class="self_rank_text1">추천수</div>
+              <div class="self_rank_text2">4009</div>
+              <div id="rank_icon3">
+                <img src="{{url_for('static',filename='image/thumbs.png')}}" />
+              </div>
+            </li>
           </ul>
         </div>
         <div class="self_grade">
-          <p>나의 등급</p>
-          <div>grades</div>
+          <p>
+            <img
+              src="{{url_for('static',filename='image/Bar_Chart.png')}}"
+            />나의 등급
+          </p>
         </div>
       </div>
     </section>
     <section class="bottomClass">
       <div class="day_week_karma">
         <ul>
-          <li>Daily 8/16 Daily streak: 144days</li>
-          <li>Weekly 24/48 Weekly streak: 20 weeks</li>
-          <li>Karma Master Current score : 15000</li>
+          <li>
+            <div class="karma1">Daily</div>
+            <div class="karma2">8/16</div>
+            <div class="karma3">Daily streak: 144days</div>
+            <div id="karma_icon1">
+              <img src="{{url_for('static',filename='image/Glyph0.png')}}" />
+            </div>
+          </li>
+          <li>
+            <div class="karma1">Weekly</div>
+            <div class="karma2">24/48</div>
+            <div class="karma3">Weekly streak: 20 weeks</div>
+            <div id="karma_icon2">
+              <img
+                src="{{url_for('static',filename='image/CombinedShape.png')}}"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="karma1">Karma</div>
+            <div class="karma2">Master</div>
+            <div class="karma3">Current score : 15000</div>
+            <div id="karma_icon3">
+              <img src="{{url_for('static',filename='image/Mask.png')}}" />
+            </div>
+          </li>
         </ul>
       </div>
     </section>

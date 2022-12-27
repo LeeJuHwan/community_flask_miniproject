@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- stack_board CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <!-- stack_board CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_yj.css') }}">
+    <!-- stack_board CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_mb.css') }}">
+    <!-- stack_board CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainboard_contents_yj.css') }}">
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
+    
+    <title>SeSAC Overflow</title>
+    <style>
+    </style>
+    
+  </head>
+  <body>
+    {% include "header_sidebar_yj.html" %}
+    {% block content %}
+    {% endblock %}
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+    <script src="http://kit.fontawesome.com/2d323a629b.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="{{url_for('static', filename ='js/header_sidebar_yj.js')}}"></script>
+  </body>
+</html>
