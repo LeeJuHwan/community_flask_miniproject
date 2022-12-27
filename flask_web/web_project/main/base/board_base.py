@@ -79,7 +79,7 @@ def show_users() :
 @bp.route("write", methods = ("GET", "POST"))
 def board_write() :
     if g.user is None :
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('user.login'))
     form = QuestionForm()
     sql = f"""
     select lang from tag;
