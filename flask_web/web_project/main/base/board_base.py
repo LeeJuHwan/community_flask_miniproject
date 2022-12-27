@@ -127,4 +127,4 @@ def test3() :
 
 @bp.route("grade")
 def grade() :
-    return render_template("grade.html)
+    return render_template("grade.html")
