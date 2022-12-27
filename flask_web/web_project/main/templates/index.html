@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"/>
 		<noscript><link rel="stylesheet" href="{{url_for('static',filename='css/noscript.css')}}"/></noscript>
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-		
+		<!-- Footer CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main_footer.css') }}">
 	</head>
 	<body class="is-preload">
 		<!-- Header -->
@@ -129,14 +130,16 @@
 	</section>
 
 <!-- Three -->
+
 	<section id="three" class="wrapper style2 special">
-		<header class="major">
+		{% include "main_footer.html" %}
+		<!-- <header class="major">
 			<!-- <h2>프로젝트 참여자</h2>
 			<p>일부 소스 코드를 열심히 고민 했던 모두가 미래의 동료를 위해 동향을 공유하세요.<br />
 			깃 허브는 당신에게 언제나 열려있습니다.</p> -->
-			<h2>테스트</h2>
+			<!-- <h2>테스트</h2>
 			<p>푸터 테스트</p>
-		</header>
+		</header> -->
 			<!-- <ul class="icons">
 				<li><a href="https://github.com/" class="icon brands fa-github"><span class="label">Github</span></a></li>
 			</ul> -->
