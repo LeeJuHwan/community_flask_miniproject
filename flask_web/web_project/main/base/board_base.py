@@ -71,9 +71,11 @@ def reply_create(board_id):
     sql = f"""
     SELECT * FROM reply WHERE board_id = {board_id}
     """
+    print("********",board)
     cur.execute(sql)
     reply = cur.fetchall()
     return render_template('detail.html', board=board, form=form, reply=reply)
+    
 
 
 @bp.route("users")
