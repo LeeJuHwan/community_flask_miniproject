@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mainboard_contents_yj.css') }}">
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
-    
+    <!-- footer -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <title>SeSAC Overflow</title>
     <style>
     </style>
@@ -24,6 +25,7 @@
   </head>
   <body>
     {% include "header_sidebar_yj.html" %}
+    {% include "footer.html" %}
     {% block content %}
     {% endblock %}
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
