@@ -6,17 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- stack_board CSS -->
+    <!-- reset CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-    <!-- stack_board CSS -->
+    <!-- header_sidebar CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_yj.css') }}">
-    <!-- stack_board CSS -->
+    <!-- header_sidebar CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_mb.css') }}">
-    <!-- stack_board CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainboard_contents_yj.css') }}">
+    <!-- footer CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
-    
     <title>SeSAC Overflow</title>
     <style>
     </style>
@@ -25,6 +24,7 @@
   <body>
     {% include "header_sidebar_yj.html" %}
     {% block content %}
+    {% include "footer.html" %}
     {% endblock %}
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="http://kit.fontawesome.com/2d323a629b.js"></script>
