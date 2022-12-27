@@ -112,3 +112,6 @@ def tag_select() :
 def test3() :
     return render_template("mypage.html")
 
+@bp.route("grade")
+def grade() :
+    return render_template("grade.html")
