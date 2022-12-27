@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    {% extends 'base.html' %}
+    {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
     
-    <title>Document</title>
-</head>
-<body>
-    <div class='contents'>
+    <div class='contents' id="contents">
         <div class ='contents_top'>
             <div class="contents_head"><h1>All questions</h1>
             <div class="contents_write">
-                <button class="w-btn w-btn-green" type="button">
+                <a href="{{url_for('board.board_write')}}"><button class="w-btn w-btn-green" type="button">
                     Ask question
-                </button></div>
+                </button></a></div>
             </div>
             <div class="question_cnt">
-                <h4 class="question_count">0개의 질문이 있습니다.</h4>
+                <h4 class="question_count">{{data_list[0]['cnt_board']}} 개의 질문이 있습니다.</h4>
             
             
             <div class="ascending_tag">
@@ -50,7 +42,7 @@
                 
                 <div class="questions_content">
                     <ul>
-                        <li class="content_item content_title">{{data['title']}}</li>
+                        <a href="{{url_for('board.detail', board_id = data.id)}}"><li class="content_item content_title">{{data['title']}}</li></a>
                         <li class="content_item content_view">{{data['content']}} </li>
                         <div class="content_item content_tag_list">
                             <li class="content_tags">{{data['lang']}}</li>
@@ -63,6 +55,4 @@
         </div>
         {% endfor %}
     </div>
-    
-</body>
-</html>
+    {% endblock %}

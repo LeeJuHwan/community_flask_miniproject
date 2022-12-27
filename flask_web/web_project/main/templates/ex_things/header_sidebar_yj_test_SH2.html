@@ -1,0 +1,90 @@
+<!-- 헤더 -->
+<!-- navbar navbar-fixed-top navbar-default-->
+<header id="header_top" class="header_top_board" role="navigation">
+    <div class="container-fluid">
+        <div class="img_container">
+            <a href="#" target="_self"><img id="logo" src="{{url_for('static', filename='css/images/banner_log.png')}}"  alt="이미지"></a>
+        </div>
+            <div id="search_bar_container">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Search something..">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div id="header_nav_container">
+                <div class="header_nav_box">
+                    <div class="header_nav_login" href="#login">LOGIN</div>
+                    <div class="header_nav_join" href="#join">JOIN</div>
+                </div>
+            </div>
+        </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fas fa-bars"></i>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</header>
+    
+<div id="sidebar_fluid"> 
+    <div id="sidebar_container" class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+
+                <ul id="sidebar_menu_container" class="nav">
+                    <li id="sidebar_menu_box" class="">
+                        <a href="#home">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Home</div>
+                        </a>
+                    </li>
+                    <!-- '상현'바꾼부분   -->
+                    <!-- <li>Question</li> 안에 Question 눌렀을 시에 나와야 할 Tags Users를 <div>태그 안에 넣어줬음  -->
+                    <!-- li 태그(Question)의 class는 content로 div태그의 class는 sub로 주었음 -->
+                    <li id="sidebar_menu_box"class="content">
+                        <a href="#questions">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/questions.png" class="questions_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Questions</div>
+                        </a>
+                
+                        <div class="sub">
+                                <a href="#Tags">
+                                    <img id="sidebar_icon" src="../static/image/sidebar_img/tags.png" class="tags_icon"></img>
+                                    <div id="sidebar_txt" class="side_menu_txt">Tags</div>
+                                </a>
+
+                                <a href="#users">
+                                    <img id="sidebar_icon" src="../static/image/sidebar_img/users.png" class="users_icon"></img>
+                                    <div id="sidebar_txt" class="side_menu_txt">Users</div>
+                                </a>
+                        </div>
+                    </li>     
+                    <li id="sidebar_menu_box" class="s">
+                        <a href="#companies">
+                            <img id="sidebar_icon" src="../static/image/sidebar_img/companies.png" class="companies_icon"></img>
+                            <div id="sidebar_txt" class="side_menu_txt">Companies</div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div> 
+</div>
+<!-- 추가한 부분 js -->
+<!-- $(".sub").hide(); -> hide가 숨길 부분  -->
+<!-- $(".content").click(function()-> 여기가 .content를 클릭 했을 때  -->
+<!-- $(".sub",this).slideToggle("fast");-> .sub,this부분을 토글추가 -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		$(".sub").hide();
+		$(".content").click(function(){
+			$(".sub",this).slideToggle("fast");
+		});
+	});
+</script>
+
+
+
+

@@ -1,0 +1,86 @@
+<!-- HEADER -->
+<!-- navbar navbar-fixed-top navbar-default-->
+<header id="header_top" class="header_top_board" role="navigation">
+    <div class="container-fluid">
+        <div class="img_container">
+            <a href="/" target="_self"><img id="logo" src="{{url_for('static', filename='image/logo.png')}}"
+                    alt="이미지"></a>
+        </div>
+        <div id="search_bar_container">
+            <div class="search-box">
+                <input class="search-input" type="text" placeholder="Search something..">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="header_nav_container">
+        <div class="header_nav_box">
+            <a class="header_nav_login" href="{{url_for('user.login')}}">LOGIN</a>
+            <a class="header_nav_join" href="{{url_for('user.register')}}">JOIN</a>
+        </div>
+    </div>
+    <button type="button" class="navbar-toggle">
+        <i class="fas fa-bars"></i>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</header>
+
+
+<!-- SIDE BAR -->
+<div class="accordion">
+    <div class="cate subopen">
+        <span class="menu">
+            <a href="#" class="menulink">HOME</a>
+        </span>
+        <ul>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>Home</div>
+            </a>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>About</div>
+            </a>
+        </ul>
+    </div>
+    <div class="cate subopen">
+        <span class="menu">
+            <a href="#" class="menulink">QUESTION</a>
+        </span>
+        <ul>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>ALL</div>
+            </a>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>Tags</div>
+            </a>
+            <a href="# ">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>Users</div>
+            </a>
+        </ul>
+    </div>
+    <div class="cate subopen">
+        <span class="menu">
+            <a href="#" class="menulink">Community</a>
+        </span>
+        <ul>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>F&Q</div>
+            </a>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>QnA</div>
+            </a>
+            <a href="#">
+                <img id="sidebar_icon" src="../static/image/sidebar_img/home.png" class="home_icon"></img>
+                <div>Contact</div>
+            </a>
+        </ul>
+    </div>
+</div>

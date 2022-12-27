@@ -1,0 +1,233 @@
+/* board css */
+
+
+#header_top {
+  display: flex;
+  margin: 0%;  
+  width: 100%;
+  height: 10.7%;
+  position: fixed;  /* Fixed top (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  overflow: hidden; /* Disable horizontal scroll */
+  font-weight: bold;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgb(149, 149, 149);
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+/* START board_main_img */
+.img_container {
+  width: 30%;
+  height: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  background-color: black;
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
+}
+/* END board_main_img */
+
+/* Add a black background color to the top navigation bar */
+
+#search_bar_container {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  margin-left: 50px;
+  width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.search_nav {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 500px;
+  float: left;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  margin-right: 10px;
+  border-radius: 1em;
+  background-color: #57DD79;
+}
+#search_icon {
+  background-color: #57DD79;
+  border-radius: 50%;
+}
+
+/* Style the links inside the navigation bar */
+/* .search_nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+} */
+
+/* Change the color of links on hover */
+/* .search_nav a:hover {
+  background-color: #ddd;
+  color: rgb(18, 94, 53);
+} */
+
+/* Style the "active" element to highlight the current page */
+/* .search_nav a.active {
+  background-color: #19802c;
+  color: white;
+} */
+
+/* Style the search box inside the navigation bar */
+.search_nav input[type=text] {
+  width: 95%;
+  height: 90%;
+  float: left;
+  border: none;
+  margin-top: 1.5px;
+  margin-left: 1.5px;
+  padding-inline-start: 10px;
+  font-size: 17px;
+  border-radius: 0.8em;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .search_nav, .search_nav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;0
+  }
+  .search_nav input[type=text] {
+    border: 1px solid rgb(17, 36, 12);
+  }
+}
+
+/* START header_nav_container */
+#header_nav_container {
+  width: 110px;
+  height: 3vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-top: 20px;
+  margin-inline-end: 50px;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+
+  background-color: #ffffff;
+  ;
+}
+.header_nav_box {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.header_nav_login {
+  width: 30px;
+  height: auto;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #ffffff;
+}
+.emty {
+  width: 50px;
+  min-width: 50px;
+}
+.header_nav_join {
+  width: 30px;
+  height: auto;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+/* END header_nav_container */
+
+/* START sidebar */
+#sidebar {
+  display: flex;
+}
+#sidebar_container {
+  top: 10.8%; /* Stay at the top */
+  left: 0;
+  padding-top: 2%;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 20%; /* Set the width of the sidebar */
+  max-width: 200px;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  background-color: #ffffff; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: box-shadow ease-in-out .1s;
+  transition: all 0.5s ease;
+  text-align: center;
+  border: 1px solid rgb(153, 153, 153);
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 1px;
+}
+#sidebar_menu_box {
+  display: flex;
+  padding: 10%;
+  text-align: center;
+  text-decoration: none;
+}
+
+#sidebar_icon {
+  padding-left: 10%;
+}
+#sidebar_txt {
+  padding-top: 4%;
+  color: black;
+  padding-left: 10%;
+}
+
+#side_menu_container a.active:hover {
+  background-color: rgb(171, 212, 170);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+#sidebar_txt a:hover {
+  background-color: rgb(21, 98, 37);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* #sidebar_txt a:link {
+  color: black;
+  text-decoration: none;
+} */
+
+#sidebar_txt a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+/* Style the "active" element to highlight the current page */
+/* #sidebar_txt a.active {
+  background-color: #6c1111;
+  color: white;
+} */
+
+/* END sidebar */
+
+
