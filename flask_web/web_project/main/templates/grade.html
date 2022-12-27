@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/grade.css')}}" />
+
+<div class="grade_info">
+    <div class="grade_title">Grade Info</div>
+    <hr class="grade_line">
+    <div>
+        <ul class="grade_content">
+            <li>
+                랭킹은 씨앗부터 나무까지 6개 등급이 있으며 각 등급별로 5단계식 총 30단계입니다.
+            </li>
+            <li>
+                랭킹은 주 1회 매주 수요일에 업데이트됩니다.
+            </li>
+        </ul>
+    </div>
+    <hr class="grade_line">
+    <div class="grade_img">
+        <img src="../static/css/images/grade chart.png" class="grade_chart" style="max-width: 80%; min-width: 40%;"></img>
+    </div>
+    <hr class="grade_line">
+    <div>
+        <ul class="grade_content">
+            <li>
+                점수산정기준
+            </li>
+        </ul>
+        <ul class="grade_sub">
+            <li>
+                내가 올린 질문에 좋아요가 달릴 때마다 +1
+            </li>
+            <li>
+                내 질문에 달린 답변을 채택하면 +2
+            </li>
+            <li>
+                답변을 1개씩 올릴 때마다 +1
+            </li>
+            <li>
+                내가 올린 답변에 좋아요가 달릴 때마다 +1
+            </li>
+            <li>
+                내가 올린 답변이 채택되면 +3
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
