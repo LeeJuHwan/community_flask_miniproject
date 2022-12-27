@@ -1,0 +1,58 @@
+    {% extends 'base.html' %}
+    {% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+    
+    <div class='contents' id="contents">
+        <div class ='contents_top'>
+            <div class="contents_head"><h1>All questions</h1>
+            <div class="contents_write">
+                <a href="{{url_for('board.board_write')}}"><button class="w-btn w-btn-green" type="button">
+                    Ask question
+                </button></a></div>
+            </div>
+            <div class="question_cnt">
+                <h4 class="question_count">{{data_list[0]['cnt_board']}} 개의 질문이 있습니다.</h4>
+            
+            
+            <div class="ascending_tag">
+                <ul class="tags_list">
+                    <li><button class="w-btn2 w-btn-green tags_item" type="button">
+                        답변
+                    </button></li>
+                    <li><button class="w-btn2 w-btn-green tags_item" type="button">
+                        추천
+                    </button></li>
+                    <li><button class="w-btn2 w-btn-green tags_item" type="button">
+                        최신
+                    </button></li>
+                </ul>
+            </div>
+            </div><hr style="left: 1rem; position: relative; border: solid 2px #d3d3d36e;">
+        </div>
+        {% for data in data_list %}
+        <div class="questions">
+            <div class="questions_layout">
+                <div class="questions_stats">
+                    <ul class="stats">
+                        <li class="stats_item">0 votes</li>
+                        <li class="stats_item">{{data['cnt_reply']}} answers</li>
+                        <li class="stats_item">{{data['views']}} views</li>
+                    </ul>
+                </div>
+                
+                <div class="questions_content">
+                    <ul>
+                        <a href="{{url_for('board.detail', board_id = data.id)}}"><li class="content_item content_title">{{data['title']}}</li></a>
+                        <li class="content_item content_view">{{data['content']}} </li>
+                        <div class="content_item content_tag_list">
+                            <li class="content_tags">{{data['lang']}}</li>
+                            <li class="content_writer">{{data['username']}}  {{data['write_date']}}</li>
+                        </div>                        
+                    </ul>
+                </div>
+            </div><hr style="left: 1rem; position: relative; border: solid 2px #d3d3d36e;">
+            
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}

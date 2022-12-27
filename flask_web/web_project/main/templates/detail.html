@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/jiye.css')}}"/>
+
+    <div id="contents">
+        <div class = "header">
+            <div class="title">
+                All Questions
+            </div>
+            <div class="menu">
+                상위메뉴 > 중간메뉴 > 하위메뉴
+            </div>
+            <hr class="line1">
+        </div>
+        
+        <div class="detail">
+            <div class="question">
+                <div class="q_title">
+                    {{board['title']}}
+                </div>
+                <hr class="line2">
+                <div class="q_content">
+                    <div class="q_text">{{board['content']}}</div>
+
+                    <!-- 예시 이미지  -->
+                    <!-- <img class="q_picture" src="https://images.velog.io/images/seochanh/post/bb832d04-48d8-412d-812c-515ddab31e7b/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202020-12-10%20181514.png"> -->
+                
+                    <div class="buttons">
+                        <button type="button" class="edit-button">수정</button>
+                        <button type="button" class="delete-button">삭제</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="a_title">{{reply[0]['cnt']}}개의 답변이 있습니다.</div>
+                <hr class="line3">
+                {% for replies in reply %}
+                <div class="a_content">
+                    <div class="a_text">
+                    {{replies['content']}}
+                    </div>
+
+                    <div class="buttons">
+                        <button type="button" class="edit-button">수정</button>
+                        <button type="button" class="delete-button">삭제</button>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <form action="{{ url_for('board.reply_create', board_id=board.id) }}" method="post">
+                    {{ form.csrf_token }}
+                    {% include "error.html" %}
+                <textarea {% if not g.user %}disabled{% endif %} name="content" id="content" class="new_content" rows="10"></textarea>
+            </div>
+        </div>
+        
+            <div>
+            
+            <button class="registration" type="submit">답변등록</button></div>
+        </form>
+    </div>
+{% endblock %}
