@@ -3,15 +3,17 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/ssen.css')}}"/>
 
 <div id="contents">
+
     <div class="all">
         All Questions
     </div>
-    <div class="munu">
+
+    <div class="munu_1">
         상위메뉴 > 중간메뉴 > 하위메뉴
     </div>
     <hr class="black">
     <div class="que">
-        <h3>질문등록</h3>
+        질문등록
     </div>
     <hr class="black2">
 
@@ -19,40 +21,36 @@
         {{ form.csrf_token }}
         {% include "error.html" %}
     <div class="title">
-        <h3>제목</h3>
+        제목
     </div>
     <div>
-        <input class = "input1" type="text" name="title" id="title" value="{{ form.title.data or ''}}">
+        <input type="text" name="title_1" id="title_1" value="{{ form.title.data or ''}}">
     </div>
     <div class="content">
-        <h3>내용</h3>
-    </div>
-    <div>
-        <input type="text" class="input2" name="content" id="content" rows="10" value="{{ form.content.data or ''}}">>
-    </div>
-    <div>
-        <input type="text" class="input3">
-    </div>
-    <div class="file">
-        <button class="tag">첨부파일</button>
+        내용
+
     </div>
 
-    
-    <div class="select">
-        <!-- <form action="{{ url_for('board.board_write') }}" method="post"> -->
-            <select name="language", id = "language" class="input4">
-                {% for items in tag_list %}
-                <option value="{{items['lang']}}">{{items['lang']}}</option>
-                {% endfor %}
-        </select>
-    
+    <div class="input2">
+       <textarea cols="30" rows="10"></textarea>
     </div>
 
-    <!-- <div>
-        <button class="tag2" type="submit">태그선택</button>
-    </div> -->
-    <div>
-        <button class="save" type="submit">저장하기</button>
+    <div class="done">
+        <div class="select">
+            <!-- <input type="text"class="input4"> -->
+            <select name="language" class="input4">
+                <form action="tag_select">
+                    {% for items in tag_list %}
+                    <option value="{{items['lang']}}">{{items['lang']}}</option>
+                    {% endfor %}
+            </select>
+        </div>
+
+
+        <div>
+            <button class="save">저장하기</button>
+        </div>
+
     </div>
 </form>
 </div>

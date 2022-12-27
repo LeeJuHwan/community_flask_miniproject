@@ -86,6 +86,7 @@ def show_users() :
 def board_write() :
     if g.user is None :
         return redirect(url_for('user.login'))    
+
     form = QuestionForm()
     
     sql = f"""
