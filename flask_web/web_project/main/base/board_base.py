@@ -220,6 +220,13 @@ def board_modify(board_id):
 @bp.route('/reply_modify/<int:board_id>/<int:reply_id>', methods=('POST','GET'))
 def reply_modify(reply_id, board_id) : 
     
+    sql = f"""select * from user"""
+    cur.execute(sql)
+    user = cur.fetchall()
+    user_dict ={}
+    for i in user:
+        user_dict[i['id']] = i['username']
+
     print("#" * 25,reply_id)
     print("#" * 25,board_id)
 
@@ -265,7 +272,7 @@ def reply_modify(reply_id, board_id) :
     if len(reply) == 0 :
         return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
 
-    return render_template('detail.html', form=form, reply = reply, board = board)
+    return render_template('detail.html', form=form, reply = reply, board = board, user_dict = user_dict)
 
 
 @bp.route("tags")
