@@ -182,26 +182,37 @@ def board_modify(board_id):
         form = QuestionForm(title=board['title'], content=board['content'])
         return render_template('write.html', form=form, tag_list = tag_list)
 
-@bp.route('/reply_modify/<int:board_id>', methods=('POST','GET'))
+
+
+
+######################################################################
+@bp.route('/reply_modify/<int:board_id>/<int:reply_id>', methods=('POST','GET'))
 def reply_modify(reply_id, board_id) : 
-    print("#"* 25, reply_id)
-    sql = f"select * from board where id={reply_id}"
+    
+    print("#" * 25,reply_id)
+    print("#" * 25,board_id)
+
+    sql = f"select * from board where id={board_id}"
+    cur.execute(sql)
+    board = cur.fetchall()[0]
+
+    sql = f"select * from reply where id={reply_id}"
     cur.execute(sql)
     reply = cur.fetchall()[0]
 
+    print(reply)
     if g.user['user_id'] != reply['user_id']:
         flash('수정권한이 없습니다')
         return redirect(url_for('board.detail', reply_id=reply.board_id))
 
     if request.method == 'POST':  # POST 요청
-        form = QuestionForm()
+        form = AnswerForm()
         if form.validate_on_submit():
             sql = f"""update reply set content='{form.content.data}', modify_date='{datetime.now()}' 
             where id={reply_id};"""
             cur.execute(sql)
-            print("reply id 확인", reply_id)
             conn.commit()
-            return redirect(url_for('board.detail', reply_id=reply['board_id']))
+            return redirect(url_for('board.detail', board_id=reply['board_id']))
     else:
         form = AnswerForm(content=reply['content'])
 
@@ -219,15 +230,16 @@ def reply_modify(reply_id, board_id) :
     cur.execute(sql)
     reply = cur.fetchall()
 
+
     if len(reply) == 0 :
         return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
 
     return render_template('detail.html', form=form, reply = reply, board = board)
 
 
-@bp.route("test3")
-def test3() :
-    return render_template("mypage.html")
+@bp.route("tags")
+def tags() :
+    return render_template("tags.html")
 
 @bp.route("grade")
 def grade() :

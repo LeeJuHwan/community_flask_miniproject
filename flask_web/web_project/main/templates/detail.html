@@ -23,7 +23,7 @@
                 <!-- 예시 이미지  -->
                 <!-- <img class="q_picture" src="https://images.velog.io/images/seochanh/post/bb832d04-48d8-412d-812c-515ddab31e7b/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202020-12-10%20181514.png"> -->
                 <div class="bottom">
-                    <div class="writer">{{board['user_id']}}</div>
+                    <div class="writer">{{board['username']}}</div>
                     <div class="time">{{board['write_date']}}</div>
                     
                     {% if g.user['user_id'] == board['user_id'] %}
@@ -32,8 +32,7 @@
                         <button type="button" class="delete-button">삭제</button></a>
                     </div>
                     {% endif %}
-                    <div class="writer">{{board['user_id']}}</div>
-                    <div class="time">{{board['write_date']}}</div>
+                
                 </div>
             </div>
         </div>
@@ -46,17 +45,28 @@
                 <div class="a_text">
                     {{replies['content']}}
                 </div>
-
+                {% if replies['id'] %}
+                <div class="a_text">
+                    <form  method="post">
+                        {{ form.csrf_token }}
+                        {% include "error.html" %}
+                        <textarea {% if not g.user %}disabled{% endif %} name="content" id="content" class="new_content"
+                            rows="10">{{ form.content.data or '' }}</textarea>
+                        <div>
+                            <button class="registration" type="submit">답변등록</button>
+                        </div>
+                    </form>
+                </div>
+                {% endif %}
+                
                 <div class="bottom">
                     <div class="time">{{replies['reply_date']}}</div>
                     <div class="writer">{{replies['user_id']}}</div>
                     <div class="buttons">
-                        <button type="button" class="edit-button">수정</button>
+                        <a href="{{ url_for('board.reply_modify', reply_id = replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">수정</button></a>
                         <button type="button" class="delete-button">삭제</button>
                     </div>
-                    {% endif %}
-                    <div class="writer">{{replies['user_id']}}</div>
-                    <div class="time">{{replies['reply_date']}}</div>
+
                 </div>
             </div>
             {% endfor %}
