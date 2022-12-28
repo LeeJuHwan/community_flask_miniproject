@@ -38,36 +38,29 @@
         </div>
 
         <div class="answer">
-            <div class="a_title">{{reply[0]['cnt']}}개의 답변이 있습니다.</div>
+            <div class="a_title">{{ cnt_reply }}개의 답변이 있습니다.</div>
             <hr class="line3">
             {% for replies in reply %}
             <div class="a_content">
                 <div class="a_text">
                     {{replies['content']}}
                 </div>
-                {% if replies['id'] %}
-                <div class="a_text">
-                    <form  method="post">
-                        {{ form.csrf_token }}
-                        {% include "error.html" %}
-                        <textarea {% if not g.user %}disabled{% endif %} name="content" id="content" class="new_content"
-                            rows="10">{{ form.content.data or '' }}</textarea>
-                        <div>
-                            <button class="registration" type="submit">답변등록</button>
-                        </div>
-                    </form>
-                </div>
-                {% endif %}
+                
                 
                 <div class="bottom">
                     <div class="time">{{replies['reply_date']}}</div>
                     <div class="writer">{{replies['user_id']}}</div>
-                    <div class="buttons">
-                        <a href="{{ url_for('board.reply_modify', reply_id = replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">수정</button></a>
-                        <button type="button" class="delete-button">삭제</button>
-                    </div>
 
+                    {% if g.user['user_id'] == reply['user_id'] %}
+                        <div class="buttons">
+                            <a href="{{ url_for('board.reply_modify', reply_id = replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">수정</button></a>
+
+                            <button type="button" class="delete-button">삭제</button>
+                        </div>
+                    {% endif %}
                 </div>
+
+
             </div>
             {% endfor %}
             <form  method="post">

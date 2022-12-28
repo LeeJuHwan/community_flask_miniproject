@@ -52,13 +52,20 @@ def detail(board_id) :
         cur.execute(sql)
 
         conn.commit()
+        
         return redirect(url_for("board.detail", board_id = board_id))
 ################################################################
-
-
+    sql = f"""
+    select count(*) as cnt from reply where board_id={board_id}
+    """
+    cur.execute(sql)
+    cnt_reply = cur.fetchone()['cnt']
+    
+    print("###########", type(reply))
+    print(reply)
     if len(reply) == 0 :
-        return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
-    return render_template("detail.html", board = board, reply = reply, form = form)
+        return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply, form = form)
+    return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply,  form = form)
 
 
 ## --> 라우팅 함수 액션 후 반응 없음(주석 처리 후, 디테일 함수에서 수정)
@@ -229,7 +236,7 @@ def reply_modify(reply_id, board_id) :
     """
     cur.execute(sql)
     reply = cur.fetchall()
-
+    print("reply test", reply)
 
     if len(reply) == 0 :
         return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
