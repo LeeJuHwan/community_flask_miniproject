@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mypage.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mypage_mb.css') }}" />
+
+<div id="contents">
+  <div id="myPage">My Page</div>
+  <div style="height: auto; width: 100%; border-bottom: 0.1rem solid #d9d9d9"></div>
+
+  <header>
+    <div class="twin_status">
+      <div class="questionStatus">
+        <div>질문<span style="color: black"> 현황</span></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"> 총 질문수 </a>
+            </li>
+            <li>
+              <a href="#"> 답변대기중 </a>
+            </li>
+            <li>
+              <a href="#"> 답변완료 </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="answerStatus">
+        <div>답변<span style="color: black"> 현황</span></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"> 총 답변수 </a>
+            </li>
+            <li>
+              <a href="#"> 채택대기중 </a>
+            </li>
+            <li>
+              <a href="#"> 채택완료 </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div></div>
+  </header>
+  <div style="height: auto; width: 100%; border-bottom: 0.1rem solid #d9d9d9"></div>
+
+  <section class="self_status">
+    <div id="proFile">
+      <div>
+        <img src="http://image.yes24.com/images/00_event/2020/0625Developer/authImg.jpg" />
+      </div>
+      <h2>sesac 2022</h2>
+      <div id="sinceFrom">가입일<br />2022.12.10</div>
+    </div>
+
+    <div class="self_introduce">
+      <div id="inputProfile">
+        <div>
+          Sesac 금천 2기 수료생입니다
+          <input type="button" value="수정" />
+        </div>
+      </div>
+    </div>
+    <div class="grade_rank">
+      <div class="self_rank">
+        <div id="self_rank_text">
+          <img src="{{url_for('static',filename='css/images/Crown.png')}}" />랭킹
+        </div>
+        <ul>
+          <li>
+            <a href="#"> 총 답변수 </a>
+          </li>
+          <li>
+            <a href="#"> 채택대기중 </a>
+          </li>
+          <li>
+            <a href="#"> 채택완료 </a>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+    <div></div>
+    </header>
+  </section>
+  <section class="bottomClass">
+    <div class="day_week_karma">
+      <ul>
+        <li>
+          <div class="karma1">Daily</div>
+          <div class="karma2">8/16</div>
+          <div class="karma3">Daily streak: 144days</div>
+          <div id="karma_icon1">
+            <img src="{{url_for('static',filename='images/Glyph0.png')}}" />
+          </div>
+        </li>
+        <li>
+          <div class="karma1">Weekly</div>
+          <div class="karma2">24/48</div>
+          <div class="karma3">Weekly streak: 20 weeks</div>
+          <div id="karma_icon2">
+            <img src="{{url_for('static',filename='images/CombinedShape.png')}}" />
+          </div>
+        </li>
+        <li>
+          <div class="karma1">Karma</div>
+          <div class="karma2">Master</div>
+          <div class="karma3">Current score : 15000</div>
+          <div id="karma_icon3">
+            <img src="{{url_for('static',filename='images/Mask.png')}}" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+{% endblock %}
