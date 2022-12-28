@@ -20,7 +20,7 @@ def select() :
     #     data_list.append({'cnt_reply' : 0})
     return render_template("test/test.html", data_list = data_list)
 
-@bp.route("detail/<int:board_id>")
+@bp.route("detail/<int:board_id>", methods=('GET','POST'))
 def detail(board_id) : 
     form = AnswerForm()
     sql = f"""
@@ -42,8 +42,13 @@ def detail(board_id) :
     print(reply)
     print("reply sql 유효 검사", type(reply), reply) # tuple 
     print("reply board id값 검사", board_id)
+
+    if request.method == "POST":
+        return 'adsfafasdf'
+
     if len(reply) == 0 :
         return render_template("detail.html", board = board, reply = [{'cnt' : 0}], form = form)
+
     return render_template("detail.html", board = board, reply = reply, form = form)
 
 @bp.route("answer/<int:board_id>", methods = ('POST',))
