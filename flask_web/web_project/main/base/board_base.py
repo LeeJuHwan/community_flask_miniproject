@@ -102,6 +102,22 @@ def detail(board_id) :
 #     return render_template('detail.html', board=board, form=form, reply=reply)
     
 
+@bp.route('/delboard/<int:board_id>')
+def delboard(board_id):
+    sql = f'''delete from board where id={board_id}'''
+    cur.execute(sql)
+    conn.commit()
+    
+    return redirect(url_for('board.select'))
+
+
+@bp.route('/delreply/<int:board_id>/<int:reply_id>')
+def delreply(board_id, reply_id):
+    sql = f'''delete from reply where id={reply_id}'''
+    cur.execute(sql)
+    conn.commit()
+    
+    return redirect(url_for('board.detail', board_id=board_id))
 
 @bp.route("users")
 def show_users() :

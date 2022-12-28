@@ -28,8 +28,8 @@
                     
                     {% if g.user['user_id'] == board['user_id'] %}
                     <div class="buttons">
-                        <a href="{{ url_for('board.board_modify', board_id = board.id)}}"><button type="button" class="edit-button">수정</button>
-                        <button type="button" class="delete-button">삭제</button></a>
+                        <a href="{{ url_for('board.board_modify', board_id = board.id)}}"><button type="button" class="edit-button">수정</button></a>
+                        <a href="{{ url_for('board.delboard', board_id = board.id)}}"><button type="button" class="delete-button">삭제</button></a>
                     </div>
                     {% endif %}
                 
@@ -50,12 +50,10 @@
                 <div class="bottom">
                     <div class="time">{{replies['reply_date']}}</div>
                     <div class="writer">{{replies['user_id']}}</div>
-
-                    {% if g.user['user_id'] == reply['user_id'] %}
+                    {% if g.user['user_id'] == replies['user_id'] %}
                         <div class="buttons">
                             <a href="{{ url_for('board.reply_modify', reply_id = replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">수정</button></a>
-
-                            <button type="button" class="delete-button">삭제</button>
+                            <a href="{{ url_for('board.delreply', reply_id = replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">삭제</button></a>
                         </div>
                     {% endif %}
                 </div>
