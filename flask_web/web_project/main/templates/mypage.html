@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/mypage.css') }}" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/mypage_mb.css') }}" />
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/mypage_mb.css') }}" /> -->
 
 <div id="contents">
   <div id="myPage">My Page</div>
@@ -66,17 +66,25 @@
     <div class="grade_rank">
       <div class="self_rank">
         <div id="self_rank_text">
-          <img src="{{url_for('static',filename='css/images/Crown.png')}}" />랭킹
+          <img src="{{url_for('static',filename='image/Crown.png')}}" />랭킹
         </div>
         <ul>
           <li>
-            <a href="#"> 총 답변수 </a>
+            <img src="{{url_for('static',filename='image/Glyph.png')}}" />
+            <div class="rank_text1"> 채택답변수 </div>
+            <div class="rank_text2"> 7/11</div>
+
           </li>
           <li>
-            <a href="#"> 채택대기중 </a>
+            <img src="{{url_for('static',filename='image/Vector.png')}}" />
+            <div class="rank_text1"> 답변채택률 </div>
+            <div class="rank_text2"> 4009</div>
+
           </li>
           <li>
-            <a href="#"> 채택완료 </a>
+            <img src="{{url_for('static',filename='image/thumbs.png')}}" />
+            <div class="rank_text1"> 추천수 </div>
+            <div class="rank_text2"> 4009</div>
           </li>
         </ul>
         </nav>
@@ -89,28 +97,49 @@
     <div class="day_week_karma">
       <ul>
         <li>
-          <div class="karma1">Daily</div>
-          <div class="karma2">8/16</div>
+          <div class="karma1">
+            Daily
+          </div>
+          <div class="karma2">
+            <div>
+              8/16
+            </div>
+            <img src="{{url_for('static',filename='image/Glyph0.png')}}" style="margin-left: 1.4rem;" />
+          </div>
           <div class="karma3">Daily streak: 144days</div>
-          <div id="karma_icon1">
-            <img src="{{url_for('static',filename='images/Glyph0.png')}}" />
-          </div>
+
         </li>
         <li>
-          <div class="karma1">Weekly</div>
-          <div class="karma2">24/48</div>
-          <div class="karma3">Weekly streak: 20 weeks</div>
-          <div id="karma_icon2">
-            <img src="{{url_for('static',filename='images/CombinedShape.png')}}" />
+          <div class="karma1">
+            Weekly
           </div>
+          <div class="karma2">
+            <div>
+              24/48
+            </div>
+            <img src="{{url_for('static',filename='image/CombinedShape.png')}}" />
+          </div>
+
+          <div class="karma3">
+            Weekly streak: 20 weeks
+          </div>
+
+
         </li>
         <li>
-          <div class="karma1">Karma</div>
-          <div class="karma2">Master</div>
-          <div class="karma3">Current score : 15000</div>
-          <div id="karma_icon3">
-            <img src="{{url_for('static',filename='images/Mask.png')}}" />
+          <div class="karma1">
+            Grade
           </div>
+          <div class="karma2">
+            <div>새싹2</div>
+            <img src="{{url_for('static',filename='image/Mask.png')}}" />
+          </div>
+          <div class="karma3">
+            Current score : 15000
+          </div>
+
+
+
         </li>
       </ul>
     </div>
