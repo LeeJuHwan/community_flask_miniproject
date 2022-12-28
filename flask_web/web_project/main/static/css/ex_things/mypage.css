@@ -1,0 +1,342 @@
+body {
+  max-width: 1920px;
+  max-height: 2000px;
+}
+
+#contents {
+  padding-top: 4em;
+  display: grid;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-align: center;
+  padding-left: 300px;
+  
+}
+
+
+#myPage {
+  position: relative;
+  width: 11rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #57dd79;
+}
+
+body > p {
+  position: relative;
+  width: 11rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #57dd79;
+}
+
+header {
+  border: 0.1rem solid #d9d9d9;
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.twin_status {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+}
+
+.questionStatus {
+  width: 50%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.questionStatus > div {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #14792e;
+}
+
+.questionStatus > nav > ul {
+  display: flex;
+}
+
+.questionStatus > nav > ul > li {
+  width: 7rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+  background: #ddffe6;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
+  border-radius: 1rem;
+  flex-basis: 25%;
+}
+
+.answerStatus {
+  width: 45rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.answerStatus > div {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #14792e;
+}
+
+.answerStatus > nav > ul {
+  display: flex;
+}
+
+.answerStatus > nav > ul > li {
+  width: 7rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+  background: #ddffe6;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
+  border-radius: 1rem;
+  flex-basis: 25%;
+}
+
+.self_status {
+  width: 180rem
+  box-sizing: border-box;
+  position: relative;
+  border: 0.2rem solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#proFile {
+  width: 20%;
+  height: 25rem;
+  min-width: 250px;
+  max-width: 300px;
+  border-right-width: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 0.1rem solid #d9d9d9;
+  overflow: hidden;
+  border: 3px solid green;
+}
+
+#proFile div {
+  overflow: hidden;
+}
+
+#proFile div img {
+  overflow: hidden;
+}
+
+#sinceFrom {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #000000;
+}
+
+.self_introduce {
+  width: 70%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  border-right: 0.1rem solid #d9d9d9;
+  overflow: hidden;
+}
+
+#inputProfile > div {
+  position: relative;
+  width: 100%;
+  height: 13rem;
+  border: 0;
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  /* line-height: 23px; */
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid #d9d9d9;
+}
+
+#inputProfile > div > input {
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  top: 3rem;
+  left: -2rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0 0 0 / 0.35);
+}
+
+.grade_rank {
+  width: 100%;
+  display: flex;
+}
+
+.self_rank {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#self_rank_text {
+  position: relative;
+  right: 14rem;
+  top: -3rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #14792e;
+}
+
+.self_rank > ul {
+  display: flex;
+  padding: 0;
+}
+
+.self_rank > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  border: 0.2rem solid black;
+  text-align: center;
+  margin-left: 3rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  flex-basis: 25%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  color: #202020;
+}
+
+.self_rank_text1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #808080;
+}
+
+.self_rank_text2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #202020;
+}
+
+.self_grade {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#self_grade_text text {
+  position: relative;
+  right: 13rem;
+  top: 0rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #14792e;
+}
+
+.day_week_karma {
+  position: relative;
+  margin: 5rem;
+  background: #57dd79;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+  display: flex;
+  
+  align-items: center;
+}
+
+.day_week_karma > ul {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day_week_karma > ul > li {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.karma1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.karma2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.karma3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
