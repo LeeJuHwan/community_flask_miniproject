@@ -20,13 +20,12 @@
 					교육과정 중 기술 질문을 위한 웹 사이트</p>
 					{% if g.user %}
 					<ul class="actions">
-						<li><a href="{{ url_for('user.logout')}}" class="button icon solid fa-chevron-down scrolly">{{ g.user.username }} 님</a></li>
+						<li><a href="{{ url_for('main.mp')}}" class="button icon solid fa-chevron-down scrolly">{{ g.user.username }} 님</a></li>
 						<li><a href="{{ url_for('user.logout')}}" class="button icon solid fa-chevron-down scrolly">로그아웃</a></li>
 					</ul>
 					{% else %}
 					<ul class="actions">
 						<li><a href="{{ url_for('user.login')}}" class="button icon solid fa-chevron-down scrolly">로그인</a></li>
-						<li><a href="{{ url_for('user.register')}}" class="button icon solid fa-chevron-down scrolly">회원가입</a></li>
 					</ul>
 					{% endif %}
 					

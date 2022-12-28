@@ -6,7 +6,7 @@ bp = Blueprint('qna', __name__, url_prefix='/qna')
 @bp.route('/')
 def qna() :
 	print("에러 확인")
-	sql = 'SELECT * FROM board;'
+	sql = 'SELECT id, title, content, date_format(create_date, "%Y-%m-%d") FROM qna order by id desc;'
 	cur.execute(sql)
 	board_list = cur.fetchall()
 	print(board_list)
@@ -17,7 +17,7 @@ def qna() :
 @bp.route('/faq')
 def faq() :
 	print("에러 확인")
-	sql = 'SELECT * FROM faq;'
+	sql = "select f.id, c.category, f.title, date_format(f.write_date, '%Y-%m-%d') as write_date from faq f join faq_category c on f.category_id = c.id order by f.id desc;"
 	cur.execute(sql)
 	faq_list = cur.fetchall()
 	print(faq_list)
