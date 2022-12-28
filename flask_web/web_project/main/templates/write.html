@@ -24,21 +24,20 @@
         제목
     </div>
     <div>
-        <input type="text" name="title_1" id="title_1" value="{{ form.title.data or ''}}">
+        <input type="text" name="title" id="title" value="{{ form.title.data or ''}}">
     </div>
     <div class="content">
         내용
-
     </div>
 
     <div class="input2">
-       <textarea cols="30" rows="10"></textarea>
+        <textarea name="content" id="content" cols="30" rows="10">{{ form.content.data or '' }}</textarea>
     </div>
 
     <div class="done">
         <div class="select">
             <!-- <input type="text"class="input4"> -->
-            <select name="language" class="input4">
+            <select name="language" class="input4" >
                 <form action="tag_select">
                     {% for items in tag_list %}
                     <option value="{{items['lang']}}">{{items['lang']}}</option>
