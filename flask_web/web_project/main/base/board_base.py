@@ -41,7 +41,6 @@ def detail(board_id) :
     reply = cur.fetchall()
 
 
-
 ## --> 답변 등록 폼 
 ########################################################
     if request.method == 'POST':

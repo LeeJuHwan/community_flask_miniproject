@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+  }
+  #body-content {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 150px;
+  }
+  .block-content {
+    padding-left: 300px;
+  }

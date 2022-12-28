@@ -12,27 +12,36 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_yj.css') }}">
     <!-- header_sidebar CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header_sidebar_mb.css') }}">
-    <!-- footer_juyeon CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer_juyeon.css') }}">
     <!-- footer CSS -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}"> -->
-    <!--juyeon_board CSS-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/juyeon_board.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
     <title>SeSAC Overflow</title>
     <style>
+    html, body {
+    height: 100%;
+    }
+  #body-content {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 150px;
+    } 
+  .block-content {
+    padding-left: 300px;
+    } 
     </style>
     
   </head>
   <body>
-    {% include "header_sidebar_yj.html" %}
-
-    {% block content %}
-
-    {% endblock %}
+    <div id="body-content">
+      {% include "header_sidebar_yj.html" %}
+      <div class="block-content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
     <footer>
-      {% include "footer_juyeon.html" %}
+      {% include "footer.html" %}
     </footer>
     <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
     <script src="http://kit.fontawesome.com/2d323a629b.js"></script>

@@ -12,7 +12,6 @@
         </div>
         <hr class="line1">
     </div>
-
     <div class="detail">
         <div class="question">
             <div class="q_title">
@@ -20,14 +19,13 @@
             </div>
             <hr class="line2">
             <div class="q_content">
-
                 <div class="q_text">{{board['content']}}</div>
-
-
                 <!-- 예시 이미지  -->
                 <!-- <img class="q_picture" src="https://images.velog.io/images/seochanh/post/bb832d04-48d8-412d-812c-515ddab31e7b/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202020-12-10%20181514.png"> -->
-
                 <div class="bottom">
+                    <div class="writer">{{board['user_id']}}</div>
+                    <div class="time">{{board['write_date']}}</div>
+                    
                     {% if g.user['user_id'] == board['user_id'] %}
                     <div class="buttons">
                         <a href="{{ url_for('board.board_modify', board_id = board.id)}}"><button type="button" class="edit-button">수정</button>
@@ -50,9 +48,10 @@
                 </div>
 
                 <div class="bottom">
-                    {% if g.user['user_id'] == board.user_id %}
+                    <div class="time">{{replies['reply_date']}}</div>
+                    <div class="writer">{{replies['user_id']}}</div>
                     <div class="buttons">
-                        <a href="{{ url_for('board.reply_modify', reply_id=replies.id, board_id = replies.board_id) }}"><button type="button" class="edit-button">수정</button></a>
+                        <button type="button" class="edit-button">수정</button>
                         <button type="button" class="delete-button">삭제</button>
                     </div>
                     {% endif %}
@@ -61,7 +60,6 @@
                 </div>
             </div>
             {% endfor %}
-
             <form  method="post">
                 {{ form.csrf_token }}
                 {% include "error.html" %}
