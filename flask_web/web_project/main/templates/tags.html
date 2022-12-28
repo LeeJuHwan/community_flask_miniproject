@@ -1,120 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{url_for('static', filename ='css/tags.css')}}">
-</head>
-  
-<body>
-    
-<div class="container">
-    <div class="card" style="--cards:5">
-      <div class="child">
-        <h2>C언어</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>C 언어는 1972년 켄 톰슨과 데니스 리치가 벨 연구소에서 일할 당시 유닉스 운영체제를 만들기 위해 고안한 프로그래밍 언어</h3>
-        <p>누적 질문수 146</p>
-        <p style="right: 1em;">오늘 올라온 질문수 23</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename ='css/tags.css')}}">
+
+<div class="container" id="contents">
+  <div class="card" style="--cards:5">
+    <div class="child">
+      <h2>C언어</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>C 언어는 1972년 켄 톰슨과 데니스 리치가 벨 연구소에서 일할 당시 유닉스 운영체제를 만들기 위해 고안한 프로그래밍 언어</h3>
+      <p>누적 질문수 146</p>
+      <p style="right: 1em;">오늘 올라온 질문수 23</p>
     </div>
-    <div class="card" style="--cards:3">
-      <div class="child">
-        <h2>Python</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>파이썬(영어: Python)은 1991년 네덜란드계 소프트웨어 엔지니어인 귀도 반 로섬이 발표한 고급 프로그래밍 언어 </h3>
-        <p>누적 질문수 325</p>
-        <p style="right: 1em;">오늘 올라온 질문수 32</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:2">
-      <div class="child">
-        <h2>JAVA</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>자바(Java)는 C언어에 객체 지향적 기능을 추가하여 만든 C++과는 달리, 처음부터 객체 지향 언어로 개발된 프로그래밍 언어</h3>
-        <p>누적 질문수 263</p>
-        <p style="right: 1em;">오늘 올라온 질문수 13</p>
-      </div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:4">
-      <div class="child">
-        <h2>CSS</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는 방법을 정해주는 스타일 시트 언어</h3>
-        <p>누적 질문수 452</p>
-        <p style="right: 1em;">오늘 올라온 질문수 42</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:4">
-      <div class="child">
-        <h2>Javascript</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>JavaScript는 개발자가 대화식 웹 페이지를 만들기 위해 사용하는 프로그래밍 언어</h3>
-        <p>누적 질문수 245</p>
-        <p style="right: 1em;">오늘 올라온 질문수 33</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:3">
-      <div class="child">
-        <h2>R</h2>
-        <hr style="border:solid 1px #14792E">
-        <h3>1993년 뉴질랜드에 위치한 오클랜드 대학교에서 개발된 통계 및 그래프 작업을 위한 인터프리터 프로그래밍 언어</h3>
-        <p>누적 질문수 332</p>
-        <p style="right: 1em;">오늘 올라온 질문수 15</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:5">
-      <div class="child">
-        <h2>Stay together for the kids</h2>
-        <hr style="border:solid 1px #14792E">
-        <p>5 articles</p>
-        <p style="right: 1em;">1 votes</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:3">
-      <div class="child">
-        <h2>Picking music for your funeral</h2>
-        <hr style="border:solid 1px #14792E">
-        <p>3 articles</p>
-        <p style="right: 1em;">1 votes</p>
-      </div>
-      <div class="child"></div>
-      <div class="child"></div>
-    </div>
-    <div class="card" style="--cards:3">
-        <div class="child">
-          <h2>Picking music for your funeral</h2>
-          <hr style="border:solid 1px #14792E">
-          <p>3 articles</p>
-          <p style="right: 1em;">1 votes</p>
-        </div>
-        <div class="child"></div>
-        <div class="child"></div>
-    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
   </div>
+  <div class="card" style="--cards:3">
+    <div class="child">
+      <h2>Python</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>파이썬(영어: Python)은 1991년 네덜란드계 소프트웨어 엔지니어인 귀도 반 로섬이 발표한 고급 프로그래밍 언어 </h3>
+      <p>누적 질문수 325</p>
+      <p style="right: 1em;">오늘 올라온 질문수 32</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:2">
+    <div class="child">
+      <h2>JAVA</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>자바(Java)는 C언어에 객체 지향적 기능을 추가하여 만든 C++과는 달리, 처음부터 객체 지향 언어로 개발된 프로그래밍 언어</h3>
+      <p>누적 질문수 263</p>
+      <p style="right: 1em;">오늘 올라온 질문수 13</p>
+    </div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:4">
+    <div class="child">
+      <h2>CSS</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>HTML 등의 마크업 언어로 작성된 문서가 실제로 웹사이트에 표현되는 방법을 정해주는 스타일 시트 언어</h3>
+      <p>누적 질문수 452</p>
+      <p style="right: 1em;">오늘 올라온 질문수 42</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:4">
+    <div class="child">
+      <h2>Javascript</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>JavaScript는 개발자가 대화식 웹 페이지를 만들기 위해 사용하는 프로그래밍 언어</h3>
+      <p>누적 질문수 245</p>
+      <p style="right: 1em;">오늘 올라온 질문수 33</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:3">
+    <div class="child">
+      <h2>R</h2>
+      <hr style="border:solid 1px #14792E">
+      <h3>1993년 뉴질랜드에 위치한 오클랜드 대학교에서 개발된 통계 및 그래프 작업을 위한 인터프리터 프로그래밍 언어</h3>
+      <p>누적 질문수 332</p>
+      <p style="right: 1em;">오늘 올라온 질문수 15</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:5">
+    <div class="child">
+      <h2>Stay together for the kids</h2>
+      <hr style="border:solid 1px #14792E">
+      <p>5 articles</p>
+      <p style="right: 1em;">1 votes</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:3">
+    <div class="child">
+      <h2>Picking music for your funeral</h2>
+      <hr style="border:solid 1px #14792E">
+      <p>3 articles</p>
+      <p style="right: 1em;">1 votes</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <div class="card" style="--cards:3">
+    <div class="child">
+      <h2>Picking music for your funeral</h2>
+      <hr style="border:solid 1px #14792E">
+      <p>3 articles</p>
+      <p style="right: 1em;">1 votes</p>
+    </div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+</div>
 ​
-      <script src="{{url_for('static', filename ='js/test/test.js')}}"></script>
-</body>
-</html>
+<script src="{{url_for('static', filename ='js/test/test.js')}}"></script>
 
 
+
+
+{% endblock %}

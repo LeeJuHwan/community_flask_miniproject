@@ -3,8 +3,8 @@ footer {
     width: 100%;
     background-color: black;
     color: #ffffff;
-    position: relative;
-    transform: translateY();
+    /* position: absolute;
+    bottom: 0; */
 }
 .footer_line {
     background-color: #ffffff;

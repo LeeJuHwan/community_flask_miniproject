@@ -18,16 +18,17 @@
             <div id="header_nav_container" class="nav_txt_toggle">
                 {% if g.user %}
                 <div class="header_nav_box">
-                    <a style="width: 5rem;" class="header_nav_login" href="{{url_for('main.mp')}}">{{g.user.username}} 님</a>
+                    <a style="width: 5rem;" class="header_nav_login" href="{{url_for('main.mp')}}">{{g.user.username}}
+                        님</a>
                     <a class="header_nav_join" href="{{url_for('user.logout')}}">LOG OUT</a>
                 </div>
                 {% else %}
                 <div class="header_nav_box">
-                <a class="header_nav_login" href="{{url_for('user.login')}}">LOG IN</a>
-                <a class="header_nav_join" href="{{url_for('user.register')}}">SIGN UP</a>
-            </div>
+                    <a class="header_nav_login" href="{{url_for('user.login')}}">LOG IN</a>
+                    <a class="header_nav_join" href="{{url_for('user.register')}}">SIGN UP</a>
+                </div>
                 {% endif %}
-        </div>
+            </div>
             <button type="button" class="navbar-toggle nav_txt_toggle">
                 <i class="fas fa-bars"></i>
                 <span class="icon-bar"></span>
@@ -86,18 +87,18 @@
             <a href="{{url_for('qna.faq')}}">
                 <img id="sidebar_icon" src="{{ url_for('static', filename='image/sidebar_img/faq.png') }}"
                     class="home_icon"></img>
-                <div>F&Q</div>
+                <div>FAQ</div>
             </a>
             <a href="{{url_for('qna.qna')}}">
                 <img id="sidebar_icon" src="{{ url_for('static', filename='image/sidebar_img/qna.png') }}"
                     class="home_icon"></img>
-                <div>QnA</div>
+                <div>Q&A</div>
             </a>
-            <a href="#">
+            <!-- <a href="#">
                 <img id="sidebar_icon" src="{{ url_for('static', filename='image/sidebar_img/contact.png') }}"
                     class="home_icon"></img>
                 <div>Contact</div>
-            </a>
+            </a> -->
         </ul>
     </div>
 </div>

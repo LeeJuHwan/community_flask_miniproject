@@ -33,14 +33,22 @@ def detail(board_id) :
     print("board id값 검사", board_id)
     
 
+    # select *, (select count(*) from reply where board_id = {board_id} ) as cnt, b.id from reply r join board b on r.board_id = b.id
+    # where r.board_id = {board_id};
     sql = f"""
-    select *, (select count(*) from reply where board_id = {board_id} ) as cnt, b.id from reply r join board b on r.board_id = b.id
-    where r.board_id = {board_id};
+
+    select *, (select count(*) from reply where board_id = {board_id}) as cnt, b.id from reply r join board b on r.board_id = b.id join user u on u.id = b.user_id where board_id= {board_id};
+
     """
     cur.execute(sql)
     reply = cur.fetchall()
 
-
+    sql = f"""select * from user"""
+    cur.execute(sql)
+    user = cur.fetchall()
+    user_dict ={}
+    for i in user:
+        user_dict[i['id']] = i['username']
 ## --> 답변 등록 폼 
 ########################################################
     if request.method == 'POST':
@@ -64,8 +72,8 @@ def detail(board_id) :
     print("###########", type(reply))
     print(reply)
     if len(reply) == 0 :
-        return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply, form = form)
-    return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply,  form = form)
+        return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply, form = form, user_dict=user_dict)
+    return render_template("detail.html", board = board, reply = reply, cnt_reply = cnt_reply,  form = form,  user_dict=user_dict)
 
 
 ## --> 라우팅 함수 액션 후 반응 없음(주석 처리 후, 디테일 함수에서 수정)
