@@ -12,7 +12,6 @@
         </div>
         <hr class="line1">
     </div>
-
     <div class="detail">
         <div class="question">
             <div class="q_title">
@@ -26,10 +25,15 @@
                 <div class="bottom">
                     <div class="writer">{{board['user_id']}}</div>
                     <div class="time">{{board['write_date']}}</div>
+                    
+                    {% if g.user['user_id'] == board['user_id'] %}
                     <div class="buttons">
-                        <button type="button" class="edit-button">수정</button>
-                        <button type="button" class="delete-button">삭제</button>
+                        <a href="{{ url_for('board.board_modify', board_id = board.id)}}"><button type="button" class="edit-button">수정</button>
+                        <button type="button" class="delete-button">삭제</button></a>
                     </div>
+                    {% endif %}
+                    <div class="writer">{{board['user_id']}}</div>
+                    <div class="time">{{board['write_date']}}</div>
                 </div>
             </div>
         </div>
@@ -50,17 +54,18 @@
                         <button type="button" class="edit-button">수정</button>
                         <button type="button" class="delete-button">삭제</button>
                     </div>
+                    {% endif %}
+                    <div class="writer">{{replies['user_id']}}</div>
+                    <div class="time">{{replies['reply_date']}}</div>
                 </div>
             </div>
             {% endfor %}
-
-            <form action="{{ url_for('board.reply_create', board_id=board.id) }}" method="post">
+            <form  method="post">
                 {{ form.csrf_token }}
                 {% include "error.html" %}
                 <textarea {% if not g.user %}disabled{% endif %} name="content" id="content" class="new_content"
-                    rows="10"></textarea>
-
-                <div class='registration_container'>
+                    rows="10">{{ form.content.data or '' }}</textarea>
+                <div>
                     <button class="registration" type="submit">답변등록</button>
                 </div>
             </form>

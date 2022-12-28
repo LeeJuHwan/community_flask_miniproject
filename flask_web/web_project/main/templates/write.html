@@ -12,13 +12,37 @@
     
         <div class="que">질문등록</div>
 
-        <hr class="black2">
+    <form action="{{ url_for('board.board_write') }}" method="post">
+        {{ form.csrf_token }}
+        {% include "error.html" %}
+    <div class="title">
+        제목
+    </div>
+    <div>
+        <input type="text" name="title" id="title" value="{{ form.title.data or ''}}">
+    </div>
+    <div class="content">
+        내용
     </div>
 
-    <div class="middle">
-        <div class="title_1">제목</div>
-        <div class="title_box">
-            <input class="title_2"  type="text" value="{{ form.title.data or ''}}">
+    <div class="input2">
+        <textarea name="content" id="content" cols="30" rows="10">{{ form.content.data or '' }}</textarea>
+    </div>
+
+    <div class="done">
+        <div class="select">
+            <!-- <input type="text"class="input4"> -->
+            <select name="language" class="input4" >
+                <form action="tag_select">
+                    {% for items in tag_list %}
+                    <option value="{{items['lang']}}">{{items['lang']}}</option>
+                    {% endfor %}
+            </select>
+        </div>
+
+
+        <div>
+            <button class="save">저장하기</button>
         </div>
         <div class="content">내용</div>
 
